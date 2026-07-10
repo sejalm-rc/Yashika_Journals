@@ -11,6 +11,7 @@ import Journals from "./pages/Journals";
 import EditorialBoard from "./pages/EditorialBoard";
 import AuthorGuidlines from "./pages/AuthorGuidelines";
 import ArticleProcessingCharges from "./pages/ArticleProcessingCharges";
+import IndexingAbstracting from "./pages/IndexingAbstracting";
 import CurrentIssue from "./pages/CurrentIssue";
 import Archives from "./pages/Archives";
 import Contact from "./pages/Contact";
@@ -24,7 +25,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-       
+        <Route path="/indexing-and-abstracting" element={<IndexingAbstracting />} />
         <Route path="/journals" element={<Journals />} />
         <Route path="/article-processing-charges" element={<ArticleProcessingCharges />} />
         <Route path="/editorial-board" element={<EditorialBoard />} />
