@@ -16,28 +16,33 @@ import bg from "../assets/yashika-publication-footer-background.webp";
 
 const journalLinks = [
   
-  { name: "About Us", path: "/about" },
-  { name: " Services", path: "/services" },
-  { name: " Journals", path: "/journals" },
-  { name: " Authors", path: "/authors",  },
+  { name: "About the Journal", path: "/about" },
+  { name: " Editorial Board", path: "/editorial-board" },
+   { name: " Indexing & Abstracting", path: "/journals" },
   { name: " Current Issue", path: "/current-issue", },
   { name: " Archives", path: "/archives", },
+ 
+  { name: " Contact", path: "/contact",  },
+  
+  
 ];
 
 const authorLinks = [
   "Author Guidelines",
-  "Submit Your Paper",
-  "Publication Ethics",
-  "Open Access Policy",
-  "FAQ for Authors",
+"Submit Manuscript",
+"Publication Ethics",
+"Peer Review Process",
+  "Copyright Policy",
+ "Article Processing Charges",
   
 ];
 
 const policyLinks = [
-  "Reviewers Guidelines",
-  "Reviewer Process",
-  "Benefits of Reviewers",
-  "Reviewer Login",
+"Privacy Policy",
+"Terms of Use",
+"Open Access Policy",
+"Conflict of Interest",
+"Plagiarism Policy",
  
 ];
 
@@ -97,7 +102,7 @@ const Footer = () => {
           <FooterColumn title="FOR AUTHORS" links={authorLinks} />
 
           {/* Policies */}
-          <FooterColumn title="FOR REVIEWERS" links={policyLinks} />
+          <FooterColumn title="POLICIES" links={policyLinks} />
 
           {/* Contact */}
           <motion.div
