@@ -11,12 +11,12 @@ const navItems = [
  
   { name: " Editorial Board", path: "/editorial-board" },
   
-  
+  { name: " Authors", path: "/author-guidelines",  },
 
   { name: "About ", path: "/about" },
   
   
-  { name: " Authors", path: "/authors",  },
+ 
   { name: " Current Issue", path: "/current-issue", },
   { name: " Archives", path: "/archives", },
 
