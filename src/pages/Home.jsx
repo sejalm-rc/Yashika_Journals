@@ -183,7 +183,7 @@ function Home() {
             whileHover={{ y: -4 }}
             className="rounded-[9px] border border-[#e4eaf2] bg-white px-5 py-5 shadow-[0_4px_14px_rgba(15,44,88,0.08)] transition-shadow duration-300 hover:shadow-[0_12px_30px_rgba(15,44,88,0.14)] sm:px-6 sm:py-6"
           >
-            <h2 className="text-[16px] font-bold uppercase tracking-[0.02em] text-[#075bc7] sm:text-[18px]">
+            <h2 className="text-[16px] font-[600] uppercase tracking-[0.02em] text-[#075bc7] sm:text-[18px]">
               About the Journal
             </h2>
             <div className="mt-1 h-[2px] w-[28px] rounded-full bg-[#1876e8]" />
@@ -217,7 +217,7 @@ function Home() {
             whileHover={{ y: -4 }}
             className="rounded-[9px] border border-[#e4eaf2] bg-white px-5 py-5 shadow-[0_4px_14px_rgba(15,44,88,0.08)] transition-shadow duration-300 hover:shadow-[0_12px_30px_rgba(15,44,88,0.14)] sm:px-6 sm:py-6"
           >
-            <h2 className="text-[16px] font-bold uppercase tracking-[0.02em] text-[#075bc7] sm:text-[18px]">
+            <h2 className="text-[16px] font-[600] uppercase tracking-[0.02em] text-[#075bc7] sm:text-[18px]">
               Journal Information
             </h2>
             <div className="mt-1 h-[2px] w-[28px] rounded-full bg-[#1876e8]" />
