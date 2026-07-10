@@ -150,7 +150,7 @@ function Home() {
                 href="/journals"
                 className="inline-flex h-[44px] items-center justify-center gap-3 rounded-[6px] bg-[#ff8a00] px-7 text-[14px] font-semibold text-white shadow-lg transition duration-300 hover:bg-[##FF6B00]"
               >
-                Submit ManuScript <ArrowRight />
+                Submit ManuScript <ArrowRight size={19}/>
               </motion.a>
 
               <motion.a
@@ -162,7 +162,7 @@ function Home() {
                 href="/authors"
                 className="inline-flex h-[44px] items-center justify-center gap-3 rounded-[6px] border-2 border-white/45 bg-transparent px-8 text-[14px] font-semibold text-white transition duration-300 hover:bg-white hover:text-[#061f45]"
               >
-                View Current Issue <ArrowRight />
+                View Current Issue <ArrowRight size={19} />
               </motion.a>
             </div>
           </motion.div>
