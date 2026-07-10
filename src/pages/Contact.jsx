@@ -16,7 +16,7 @@ import {
 } from "react-icons/fa";
 import PageTransition from "../components/PageTransition";
 
-import ContactHero from "../assets/yashika-publication-contact-us-banner.webp";
+import ContactHero from "../assets/yashika-journal-home-hero-banner.webp";
 // import ContactMap from "../assets/contactMap.png";
 
 const contactDetails = [
@@ -216,7 +216,7 @@ const Contact = () => {
       </section>
 
       {/* CONTACT FORM */}
-      <section className="relative z-30 -mt-[70px] bg-transparent px-4 pb-8 sm:px-5 lg:-mt-[85px]">
+      <section className="relative z-30 mt-[10px] bg-transparent px-4 pb-8 sm:px-5 ">
         <motion.div
           initial={{ opacity: 0, y: 45 }}
           whileInView={{ opacity: 1, y: 0 }}
