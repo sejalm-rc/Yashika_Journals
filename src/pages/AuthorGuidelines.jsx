@@ -785,8 +785,8 @@ export default function AuthorGuidelines() {
 
       <QuickNavigation />
 
-      <section className="px-4 pb-9 pt-6 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-[1370px] gap-7 lg:grid-cols-[255px_minmax(0,1fr)]">
+      <section className="px-5 pb-9 pt-6 m:pb-16 sm:px-8 lg:px-14 xl:px-14">
+        <div className="mx-auto grid max-w-[1400px] gap-7 lg:grid-cols-[255px_minmax(0,1fr)]">
           <Sidebar />
 
           <div className="min-w-0">
