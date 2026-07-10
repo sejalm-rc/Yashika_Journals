@@ -20,8 +20,8 @@ const journalLinks = [
   { name: " Services", path: "/services" },
   { name: " Journals", path: "/journals" },
   { name: " Authors", path: "/authors",  },
-  { name: " Reviewers", path: "/reviewers", },
-  { name: " Resources", path: "/resources", },
+  { name: " Current Issue", path: "/current-issue", },
+  { name: " Archives", path: "/archives", },
 ];
 
 const authorLinks = [
