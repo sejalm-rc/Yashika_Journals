@@ -144,6 +144,76 @@ const fadeUp = {
   },
 };
 
+const sectionReveal = {
+  hidden: {
+    opacity: 0,
+    y: 35,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.65,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+const staggerContainer = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.08,
+    },
+  },
+};
+
+const staggerItem = {
+  hidden: {
+    opacity: 0,
+    y: 22,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+const slideFromLeft = {
+  hidden: {
+    opacity: 0,
+    x: -35,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.65,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+const slideFromRight = {
+  hidden: {
+    opacity: 0,
+    x: 35,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.65,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
 const About = () => {
   return (
     <PageTransition>
@@ -227,23 +297,15 @@ const About = () => {
         <section className="px-5 py-8 sm:px-8 lg:px-12 lg:py-8 xl:px-16">
           <div className="mx-auto grid max-w-[1380px] items-start gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
             {/* About content */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                x: -30,
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.2,
-              }}
-              transition={{
-                duration: 0.6,
-              }}
-            >
+           <motion.div
+  variants={slideFromLeft}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{
+    once: true,
+    amount: 0.2,
+  }}
+>
               <SectionHeading title="About the Journal" />
 
               <div className="mt-5  text-[13px] font-[400] leading-7 text-[#334357] sm:text-[14px]">
@@ -264,47 +326,64 @@ const About = () => {
 
             {/* Overview card */}
             <motion.div
-              initial={{
-                opacity: 0,
-                x: 30,
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.2,
-              }}
-              transition={{
-                duration: 0.6,
-              }}
-              whileHover={{
-                y: -5,
-                boxShadow: "0 18px 45px rgba(5, 46, 105, 0.12)",
-              }}
-              className="rounded-[8px] border border-[#dce4ef] bg-white p-5 shadow-[0_7px_24px_rgba(10,43,84,0.08)] sm:p-6"
-            >
+  variants={slideFromRight}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{
+    once: true,
+    amount: 0.2,
+  }}
+  whileHover={{
+    y: -5,
+    boxShadow: "0 18px 45px rgba(5, 46, 105, 0.12)",
+  }}
+  transition={{
+    duration: 0.3,
+  }}
+  className="rounded-[8px] border border-[#dce4ef] bg-white p-5 shadow-[0_7px_24px_rgba(10,43,84,0.08)] sm:p-6"
+>
               <h2 className="mb-2 text-[18px] font-[600] text-[#0c3372]">
                 Journal Overview
               </h2>
 
-              <div className="overflow-hidden rounded-[5px] border border-[#e1e6ed]">
+             <motion.div
+  variants={staggerContainer}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{
+    once: true,
+    amount: 0.15,
+  }}
+  className="overflow-hidden rounded-[5px] border border-[#e1e6ed]"
+>
                 {overviewItems.map((item, index) => (
-                  <motion.div
-                    key={item.label}
-                    whileHover={{
-                      backgroundColor: "#f5f6f7",
-                    }}
+                 <motion.div
+  key={item.label}
+  variants={staggerItem}
+  whileHover={{
+    backgroundColor: "#f5f6f7",
+    x: 5,
+    transition: { duration: 0.2 }
+  }}
                     className={`grid grid-cols-[38px_100px_1fr]  items-center text-[11px] sm:grid-cols-[42px_130px_1fr] sm:text-[12px] ${
                       index !== overviewItems.length - 1
                         ? "border-b border-[#e2e7ee]"
                         : ""
                     }`}
                   >
-                    <div className="flex h-full min-h-[42px] items-center justify-center border-r border-[#e2e7ee] text-[14px] text-[#264fa3]">
+                    <motion.div
+  whileHover={{
+    scale: 1.2,
+    rotate: 8
+  }}
+  transition={{
+    type: "spring",
+    stiffness: 350
+  }}
+  className="flex h-full min-h-[42px] items-center justify-center border-r border-[#e2e7ee] text-[14px] text-[#264fa3]"
+>
                       {item.icon}
-                    </div>
+                    </motion.div>
 
                     <div className="flex min-h-[42px] items-center border-r border-[#e2e7ee] px-3 font-[500] text-[#334155]">
                       {item.label}
@@ -315,7 +394,7 @@ const About = () => {
                     </div>
                   </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </motion.div>
           </div>
         </section>
@@ -420,8 +499,15 @@ const About = () => {
                 className="overflow-hidden rounded-[7px] border border-[#d9e1ec]"
               >
                 {/* Desktop table */}
-                <div className="hidden md:block">
-                  <div className="grid grid-cols-[58px_275px_1fr] bg-[#082d68] text-[12px] font-[600] text-white">
+<motion.div
+  variants={staggerContainer}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{
+    once: true
+  }}
+  className="hidden md:block"
+>                  <div className="grid grid-cols-[58px_275px_1fr] bg-[#082d68] text-[12px] font-[600] text-white">
                     <div className="flex min-h-[38px] items-center justify-center border-r border-white/15">
                       <FaBookOpen />
                     </div>
@@ -460,7 +546,7 @@ const About = () => {
                       </div>
                     </motion.div>
                   ))}
-                </div>
+                </motion.div>
 
                 {/* Mobile cards */}
                 <div className="space-y-3 bg-[#f7f9fc] p-3 md:hidden">
