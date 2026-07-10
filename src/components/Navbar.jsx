@@ -8,24 +8,44 @@ import logo from "../assets/yashika-publication-logo.webp";
 
 const navItems = [
   { name: "Home", path: "/" },
- { name: "About ", path: "/about" },
-  { name: " Editorial Board", path: "/editorial-board" },
-  
-  { name: "For Authors", path: "/author-guidelines",  },
 
-  
-  
-  
- 
-  { name: " Current Issue", path: "/current-issue", },
-  { name: " Archives", path: "/archives", },
+  {
+    name: "About",
+    path: "/about",
+    dropdown: [
+      { name: "About the Journal", path: "/about" },
+     
+      { name: "Aims and Scope", path: "/aims-and-scope" },
+      { name: "Indexing & Abstracting", path: "/indexing-and-abstracting" },
+    ],
+  },
 
+  {
+    name: "For Authors",
+    path: "/author-guidelines",
+    dropdown: [
+      { name: "Author Guidelines", path: "/author-guidelines" },
+      { name: "Submit Manuscript", path: "/submit-manuscript" },
+      { name: "Publication Ethics", path: "/publication-ethics" },
+      { name: "Peer Review Process", path: "/peer-review-process" },
+      { name: "Copyright Policy", path: "/copyright-policy" },
+      {
+        name: "Article Processing Charges",
+        path: "/article-processing-charges",
+      },
+    ],
+  },
+ { name: "Editorial Board", path: "/editorial-board" },
+  { name: "Current Issue", path: "/current-issue" },
+  { name: "Archives", path: "/archives" },
   { name: "Contact Us", path: "/contact" },
 ];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [desktopDropdown, setDesktopDropdown] = useState(null);
+const [mobileDropdown, setMobileDropdown] = useState(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -34,9 +54,11 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
+ useEffect(() => {
+  setIsOpen(false);
+  setDesktopDropdown(null);
+  setMobileDropdown(null);
+}, [location.pathname]);
 
   return (
     <>
@@ -54,34 +76,87 @@ const Navbar = () => {
             />
           </NavLink>
 
-          <div className="hidden items-center gap-[32px] lg:flex">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                end={item.path === "/"}
-                className={({ isActive }) =>
-                  `relative flex items-center gap-1 pb-[7px] text-[14px] font-[600] transition-all duration-300 ${
-                    isActive
-                      ? "text-[#005da8]"
-                      : "text-[#111827] hover:text-[#005da8]"
-                  }`
-                }
-              >
-                {({ isActive }) => (
-                  <>
-                    <span>{item.name}</span>
-                    {item.dropdown && <ChevronDown size={13} strokeWidth={2.4} />}
-                    <span
-                      className={`absolute bottom-0 left-0 h-[3px] rounded-full bg-[#005da8] transition-all duration-300 ${
-                        isActive ? "w-full" : "w-0 group-hover:w-full"
-                      }`}
-                    />
-                  </>
-                )}
-              </NavLink>
-            ))}
-          </div>
+        <div className="hidden items-center gap-[32px] lg:flex">
+  {navItems.map((item) => {
+    const hasDropdown = Boolean(item.dropdown?.length);
+    const isDropdownOpen = desktopDropdown === item.name;
+
+    return (
+      <div
+        key={item.name}
+        className="relative"
+        onMouseEnter={() => {
+          if (hasDropdown) {
+            setDesktopDropdown(item.name);
+          }
+        }}
+        onMouseLeave={() => setDesktopDropdown(null)}
+      >
+        <NavLink
+          to={item.path}
+          end={item.path === "/"}
+          className={({ isActive }) =>
+            `group relative flex items-center gap-1 pb-[7px] text-[14px] font-[600] transition-all duration-300 ${
+              isActive
+                ? "text-[#005da8]"
+                : "text-[#111827] hover:text-[#005da8]"
+            }`
+          }
+        >
+          {({ isActive }) => (
+            <>
+              <span>{item.name}</span>
+
+              {hasDropdown && (
+                <ChevronDown
+                  size={14}
+                  strokeWidth={2.4}
+                  className={`transition-transform duration-300 ${
+                    isDropdownOpen ? "rotate-180" : ""
+                  }`}
+                />
+              )}
+
+              <span
+                className={`absolute bottom-0 left-0 h-[3px] rounded-full bg-[#005da8] transition-all duration-300 ${
+                  isActive ? "w-full" : "w-0 group-hover:w-full"
+                }`}
+              />
+            </>
+          )}
+        </NavLink>
+
+        <AnimatePresence>
+          {hasDropdown && isDropdownOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: 10, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 8, scale: 0.98 }}
+              transition={{ duration: 0.2 }}
+              className="absolute left-0 top-full z-50 mt-2 min-w-[235px] overflow-hidden rounded-[7px] border border-[#dce5ef] bg-white p-2 shadow-[0_15px_35px_rgba(0,0,0,0.16)]"
+            >
+              {item.dropdown.map((dropdownItem) => (
+                <NavLink
+                  key={dropdownItem.path}
+                  to={dropdownItem.path}
+                  className={({ isActive }) =>
+                    `block rounded-[5px] px-4 py-[11px] text-[13px] font-[500] transition-all duration-300 ${
+                      isActive
+                        ? "bg-[#005da8] text-white"
+                        : "text-[#1f2937] hover:translate-x-1 hover:bg-[#eaf4ff] hover:text-[#005da8]"
+                    }`
+                  }
+                >
+                  {dropdownItem.name}
+                </NavLink>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    );
+  })}
+</div>
 
         
 
@@ -129,29 +204,105 @@ const Navbar = () => {
               </div>
 
               <div className="flex flex-col px-3 py-3">
-                {navItems.map((item, index) => (
-                  <motion.div
-                    key={item.path}
-                    initial={{ opacity: 0, x: -18 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.04 }}
-                  >
+             {navItems.map((item, index) => {
+  const hasDropdown = Boolean(item.dropdown?.length);
+  const isDropdownOpen = mobileDropdown === item.name;
+
+  return (
+    <motion.div
+      key={item.name}
+      initial={{ opacity: 0, x: -18 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: index * 0.04 }}
+      className="mb-1"
+    >
+      {hasDropdown ? (
+        <>
+          <div className="flex overflow-hidden rounded-md">
+            <NavLink
+              to={item.path}
+              className={({ isActive }) =>
+                `flex flex-1 items-center px-4 py-3 text-[14px] font-semibold transition-all duration-300 ${
+                  isActive
+                    ? "bg-[#005da8] text-white"
+                    : "text-[#111827] hover:bg-[#eaf4ff] hover:text-[#005da8]"
+                }`
+              }
+            >
+              {item.name}
+            </NavLink>
+
+            <button
+              type="button"
+              onClick={() =>
+                setMobileDropdown(
+                  isDropdownOpen ? null : item.name
+                )
+              }
+              className={`flex w-12 items-center justify-center transition-colors duration-300 ${
+                isDropdownOpen
+                  ? "bg-[#005da8] text-white"
+                  : "bg-[#f3f7fb] text-[#005da8]"
+              }`}
+              aria-label={`Toggle ${item.name} dropdown`}
+            >
+              <ChevronDown
+                size={16}
+                className={`transition-transform duration-300 ${
+                  isDropdownOpen ? "rotate-180" : ""
+                }`}
+              />
+            </button>
+          </div>
+
+          <AnimatePresence>
+            {isDropdownOpen && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: "auto", opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.28 }}
+                className="overflow-hidden"
+              >
+                <div className="ml-4 mt-1 border-l-2 border-[#d8e8f7] pl-3">
+                  {item.dropdown.map((dropdownItem) => (
                     <NavLink
-                      to={item.path}
-                      end={item.path === "/"}
+                      key={dropdownItem.path}
+                      to={dropdownItem.path}
                       className={({ isActive }) =>
-                        `mb-1 flex items-center justify-between rounded-md px-4 py-3 text-[14px] font-semibold transition-all duration-300 ${
+                        `mb-1 block rounded-md px-3 py-2 text-[13px] font-medium transition-all duration-300 ${
                           isActive
                             ? "bg-[#005da8] text-white"
-                            : "text-[#111827] hover:bg-[#eaf4ff] hover:text-[#005da8]"
+                            : "text-[#374151] hover:translate-x-1 hover:bg-[#eaf4ff] hover:text-[#005da8]"
                         }`
                       }
                     >
-                      <span>{item.name}</span>
-                      {item.dropdown && <ChevronDown size={14} />}
+                      {dropdownItem.name}
                     </NavLink>
-                  </motion.div>
-                ))}
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </>
+      ) : (
+        <NavLink
+          to={item.path}
+          end={item.path === "/"}
+          className={({ isActive }) =>
+            `flex items-center rounded-md px-4 py-3 text-[14px] font-semibold transition-all duration-300 ${
+              isActive
+                ? "bg-[#005da8] text-white"
+                : "text-[#111827] hover:bg-[#eaf4ff] hover:text-[#005da8]"
+            }`
+          }
+        >
+          {item.name}
+        </NavLink>
+      )}
+    </motion.div>
+  );
+})}
 
                
               </div>
