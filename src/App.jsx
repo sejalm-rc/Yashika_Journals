@@ -10,6 +10,7 @@ import Authors from "./pages/Authors";
 import Journals from "./pages/Journals";
 import EditorialBoard from "./pages/EditorialBoard";
 import AuthorGuidlines from "./pages/AuthorGuidelines";
+import ArticleProcessingCharges from "./pages/ArticleProcessingCharges";
 import CurrentIssue from "./pages/CurrentIssue";
 import Archives from "./pages/Archives";
 import Contact from "./pages/Contact";
@@ -25,7 +26,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/authors" element={<Authors />} />
         <Route path="/journals" element={<Journals />} />
-  
+        <Route path="/article-processing-charges" element={<ArticleProcessingCharges />} />
         <Route path="/editorial-board" element={<EditorialBoard />} />
         <Route path="/author-guidelines" element={<AuthorGuidlines />} />
         <Route path="/current-issue" element={<CurrentIssue />} />
