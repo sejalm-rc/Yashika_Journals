@@ -165,11 +165,11 @@ const categories = [
 
 const manuscriptStructure = [
   ["Title", "Concise and informative."],
-  ["Authors & Affiliations", "Full names, affiliations, and correspondence email."],
   [
-    "Abstract",
-    "Structured abstract (Aim, Methods, Results, Conclusion).",
+    "Authors & Affiliations",
+    "Full names, affiliations, and correspondence email.",
   ],
+  ["Abstract", "Structured abstract (Aim, Methods, Results, Conclusion)."],
   ["Keywords", "3–6 relevant keywords."],
   ["Introduction", "Background, problem statement, and objectives."],
   ["Methods", "Detailed methodology to allow replication."],
@@ -384,11 +384,11 @@ function QuickNavigation() {
               />
 
               <div>
-                <h3 className="text-[12px] font-[600] leading-[1.4] text-[#082b67]">
+                <h3 className="text-[14px] font-[600] leading-[1.4] text-[#082b67]">
                   {item.title}
                 </h3>
 
-                <p className="mt-1 text-[10px] font-medium leading-[1.45] text-[#53647a]">
+                <p className="mt-1 text-[12px] font-medium leading-[1.45] text-[#53647a]">
                   {item.subtitle}
                 </p>
               </div>
@@ -412,7 +412,7 @@ function Sidebar() {
       }}
       className="self-start rounded-[7px] border border-[#dfe7ef] bg-white p-5 shadow-[0_4px_16px_rgba(7,50,101,0.07)] lg:sticky lg:top-6"
     >
-      <h2 className="text-[14px] font-[600] uppercase text-[#063b87]">
+      <h2 className="text-[16px] font-[600] uppercase text-[#063b87]">
         Guidelines Sections
       </h2>
 
@@ -429,11 +429,11 @@ function Sidebar() {
             }}
             className="group flex items-center gap-3 rounded-[5px] px-1 py-[7px]"
           >
-            <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-[4px] bg-[#edf5ff] text-[10px] font-[600] text-[#0762c8] transition group-hover:bg-[#0762c8] group-hover:text-white">
+            <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-[4px] bg-[#edf5ff] text-[13px] font-[600] text-[#0762c8] transition group-hover:bg-[#0762c8] group-hover:text-white">
               {index + 1}
             </span>
 
-            <span className="text-[11px] font-semibold text-[#18315e]">
+            <span className="text-[13px] font-semibold text-[#18315e]">
               {item}
             </span>
           </motion.a>
@@ -451,11 +451,11 @@ function Sidebar() {
           <Download className="h-[31px] w-[31px]" strokeWidth={1.7} />
         </div>
 
-        <h3 className="mt-4 text-[15px] font-[600] text-[#063b87]">
+        <h3 className="mt-4 text-[16px] font-[600] text-[#063b87]">
           Download Templates
         </h3>
 
-        <p className="mt-4 text-[11px] font-medium leading-[1.7] text-[#34465f]">
+        <p className="mt-4 text-[12px] font-medium leading-[1.7] text-[#34465f]">
           Use our template to format your manuscript correctly.
         </p>
 
@@ -557,23 +557,23 @@ function CategoriesSection() {
           <table className="w-full min-w-[760px] border-collapse">
             <thead>
               <tr className="bg-[#073b82] text-left text-white">
-                <th className="border-r border-white/25 px-4 py-3 text-[10px] font-semibold">
+                <th className="border-r border-white/25 px-4 py-3 text-[12px] font-semibold">
                   Category
                 </th>
 
-                <th className="border-r border-white/25 px-4 py-3 text-[10px] font-semibold">
+                <th className="border-r border-white/25 px-4 py-3 text-[12px] font-semibold">
                   Description
                 </th>
 
-                <th className="border-r border-white/25 px-4 py-3 text-center text-[10px] font-semibold">
+                <th className="border-r border-white/25 px-4 py-3 text-center text-[12px] font-semibold">
                   Maximum Word Limit*
                 </th>
 
-                <th className="border-r border-white/25 px-4 py-3 text-center text-[10px] font-semibold">
+                <th className="border-r border-white/25 px-4 py-3 text-center text-[12px] font-semibold">
                   Abstract
                 </th>
 
-                <th className="px-4 py-3 text-center text-[10px] font-semibold">
+                <th className="px-4 py-3 text-center text-[12px] font-semibold">
                   References
                 </th>
               </tr>
@@ -603,23 +603,23 @@ function CategoriesSection() {
                   }}
                   className="border-b border-[#e0e7ef] last:border-b-0"
                 >
-                  <td className="border-r border-[#e0e7ef] px-4 py-[9px] text-[10px] font-[600] text-[#0860c4]">
+                  <td className="border-r border-[#e0e7ef] px-4 py-[9px] text-[12px] font-[600] text-[#0860c4]">
                     {item.category}
                   </td>
 
-                  <td className="border-r border-[#e0e7ef] px-4 py-[9px] text-[10px] font-medium text-[#44556c]">
+                  <td className="border-r border-[#e0e7ef] px-4 py-[9px] text-[12px] font-medium text-[#44556c]">
                     {item.description}
                   </td>
 
-                  <td className="border-r border-[#e0e7ef] px-4 py-[9px] text-center text-[10px] font-semibold text-[#233b60]">
+                  <td className="border-r border-[#e0e7ef] px-4 py-[9px] text-center text-[12px] font-semibold text-[#233b60]">
                     {item.words}
                   </td>
 
-                  <td className="border-r border-[#e0e7ef] px-4 py-[9px] text-center text-[10px] font-semibold text-[#233b60]">
+                  <td className="border-r border-[#e0e7ef] px-4 py-[9px] text-center text-[12px] font-semibold text-[#233b60]">
                     {item.abstract}
                   </td>
 
-                  <td className="px-4 py-[9px] text-center text-[10px] font-semibold text-[#233b60]">
+                  <td className="px-4 py-[9px] text-center text-[12px] font-semibold text-[#233b60]">
                     {item.references}
                   </td>
                 </motion.tr>
@@ -629,7 +629,7 @@ function CategoriesSection() {
         </div>
       </motion.div>
 
-      <p className="mt-2 text-[9px] font-medium text-[#53647a] sm:text-[10px]">
+      <p className="mt-2 text-[9px] font-medium text-[#53647a] sm:text-[12px]">
         *Includes text, references, tables and figure captions.
       </p>
     </section>
@@ -661,9 +661,9 @@ function ManuscriptStructureSection() {
             }}
             className="grid gap-1 rounded-[4px] px-1 py-1 sm:grid-cols-[115px_1fr]"
           >
-            <p className="text-[10px] font-[600] text-[#183665]">{label}</p>
+            <p className="text-[12px] font-[600] text-[#183665]">{label}</p>
 
-            <p className="text-[9px] font-medium leading-[1.5] text-[#53647a] sm:text-[10px]">
+            <p className="text-[11px] font-medium leading-[1.5] text-[#53647a] sm:text-[12px]">
               {value}
             </p>
           </motion.div>
@@ -706,11 +706,11 @@ function FormattingSection() {
                 strokeWidth={1.8}
               />
 
-              <p className="text-[10px] font-[600] text-[#183665]">
+              <p className="text-[12px] font-[600] text-[#183665]">
                 {item.label}
               </p>
 
-              <p className="text-[9px] font-medium leading-[1.5] text-[#53647a] sm:text-[10px]">
+              <p className="text-[11px] font-medium leading-[1.5] text-[#53647a] sm:text-[12px]">
                 {item.value}
               </p>
             </motion.div>
@@ -751,11 +751,11 @@ function ImportantNote() {
         </div>
 
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-8">
-          <h3 className="whitespace-nowrap text-[15px] font-[600] text-[#063b87]">
+          <h3 className="whitespace-nowrap text-[16px] font-[600] text-[#063b87]">
             Important Note
           </h3>
 
-          <p className="text-[10px] font-medium leading-[1.6] text-[#34455f] sm:text-[11px]">
+          <p className="text-[11px] font-medium leading-[1.6] text-[#34455f] sm:text-[12px]">
             Failure to follow these guidelines may result in delays or rejection
             of your manuscript.
           </p>
@@ -763,13 +763,13 @@ function ImportantNote() {
       </div>
 
       <div className="border-t border-[#d8e4f1] px-5 py-5 sm:border-l sm:border-t-0 sm:px-7">
-        <p className="text-[10px] font-medium leading-[1.55] text-[#34455f]">
+        <p className="text-[11px] font-medium leading-[1.55] text-[#34455f]">
           For any queries, please contact us at
         </p>
 
         <a
           href="mailto:editor.aierrr@yashikapublications.com"
-          className="mt-1 block break-all text-[10px] font-[600] text-[#075ec7] hover:underline sm:text-[11px]"
+          className="mt-1 block break-all text-[11px] font-[600] text-[#075ec7] hover:underline sm:text-[12px]"
         >
           editor.aierrr@yashikapublications.com
         </a>
