@@ -384,7 +384,7 @@ function DatabaseCard({ database }) {
           src={database.logo}
           alt={database.alt}
           loading="lazy"
-          className="max-h-[58px] max-w-[165px] object-contain transition-transform duration-300 group-hover:scale-105"
+          className="max-h-[50px] max-w-[150px] object-contain transition-transform duration-300 group-hover:scale-105"
         />
       </motion.div>
 
