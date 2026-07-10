@@ -347,7 +347,7 @@ function QuickNavigation() {
       transition={{
         duration: 0.55,
       }}
-      className="mx-auto mt-6 max-w-[1370px] px-4 sm:px-6 lg:px-8"
+      className="mx-auto mt-6 max-w-[1400px] px-5 m:pb-16 sm:px-8 lg:px-14 xl:px-14"
     >
       <div className="grid overflow-hidden rounded-[7px] border border-[#dfe7f0] bg-white shadow-[0_4px_17px_rgba(7,50,101,0.08)] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         {quickLinks.map((item, index) => {
@@ -384,7 +384,7 @@ function QuickNavigation() {
               />
 
               <div>
-                <h3 className="text-[12px] font-bold leading-[1.4] text-[#082b67]">
+                <h3 className="text-[12px] font-[600] leading-[1.4] text-[#082b67]">
                   {item.title}
                 </h3>
 
@@ -412,7 +412,7 @@ function Sidebar() {
       }}
       className="self-start rounded-[7px] border border-[#dfe7ef] bg-white p-5 shadow-[0_4px_16px_rgba(7,50,101,0.07)] lg:sticky lg:top-6"
     >
-      <h2 className="text-[14px] font-bold uppercase text-[#063b87]">
+      <h2 className="text-[14px] font-[600] uppercase text-[#063b87]">
         Guidelines Sections
       </h2>
 
@@ -429,7 +429,7 @@ function Sidebar() {
             }}
             className="group flex items-center gap-3 rounded-[5px] px-1 py-[7px]"
           >
-            <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-[4px] bg-[#edf5ff] text-[10px] font-bold text-[#0762c8] transition group-hover:bg-[#0762c8] group-hover:text-white">
+            <span className="flex h-[20px] w-[20px] shrink-0 items-center justify-center rounded-[4px] bg-[#edf5ff] text-[10px] font-[600] text-[#0762c8] transition group-hover:bg-[#0762c8] group-hover:text-white">
               {index + 1}
             </span>
 
@@ -451,7 +451,7 @@ function Sidebar() {
           <Download className="h-[31px] w-[31px]" strokeWidth={1.7} />
         </div>
 
-        <h3 className="mt-4 text-[15px] font-bold text-[#063b87]">
+        <h3 className="mt-4 text-[15px] font-[600] text-[#063b87]">
           Download Templates
         </h3>
 
@@ -470,7 +470,7 @@ function Sidebar() {
           }}
           href="/documents/aierrr-manuscript-template.docx"
           download
-          className="mt-5 inline-flex h-[40px] w-full items-center justify-center rounded-[5px] border border-[#075dc5] px-3 text-[11px] font-bold text-[#075dc5] transition"
+          className="mt-5 inline-flex h-[40px] w-full items-center justify-center rounded-[5px] border border-[#075dc5] px-3 text-[11px] font-[600] text-[#075dc5] transition"
         >
           Download Template (DOCX)
         </motion.a>
@@ -514,7 +514,7 @@ function BeforeSubmissionSection() {
               />
 
               <div>
-                <h3 className="text-[12px] font-bold text-[#07377f]">
+                <h3 className="text-[12px] font-[600] text-[#07377f]">
                   {item.title}
                 </h3>
 
@@ -603,7 +603,7 @@ function CategoriesSection() {
                   }}
                   className="border-b border-[#e0e7ef] last:border-b-0"
                 >
-                  <td className="border-r border-[#e0e7ef] px-4 py-[9px] text-[10px] font-bold text-[#0860c4]">
+                  <td className="border-r border-[#e0e7ef] px-4 py-[9px] text-[10px] font-[600] text-[#0860c4]">
                     {item.category}
                   </td>
 
@@ -661,7 +661,7 @@ function ManuscriptStructureSection() {
             }}
             className="grid gap-1 rounded-[4px] px-1 py-1 sm:grid-cols-[115px_1fr]"
           >
-            <p className="text-[10px] font-bold text-[#183665]">{label}</p>
+            <p className="text-[10px] font-[600] text-[#183665]">{label}</p>
 
             <p className="text-[9px] font-medium leading-[1.5] text-[#53647a] sm:text-[10px]">
               {value}
@@ -706,7 +706,7 @@ function FormattingSection() {
                 strokeWidth={1.8}
               />
 
-              <p className="text-[10px] font-bold text-[#183665]">
+              <p className="text-[10px] font-[600] text-[#183665]">
                 {item.label}
               </p>
 
@@ -751,7 +751,7 @@ function ImportantNote() {
         </div>
 
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-8">
-          <h3 className="whitespace-nowrap text-[15px] font-bold text-[#063b87]">
+          <h3 className="whitespace-nowrap text-[15px] font-[600] text-[#063b87]">
             Important Note
           </h3>
 
@@ -769,7 +769,7 @@ function ImportantNote() {
 
         <a
           href="mailto:editor.aierrr@yashikapublications.com"
-          className="mt-1 block break-all text-[10px] font-bold text-[#075ec7] hover:underline sm:text-[11px]"
+          className="mt-1 block break-all text-[10px] font-[600] text-[#075ec7] hover:underline sm:text-[11px]"
         >
           editor.aierrr@yashikapublications.com
         </a>
