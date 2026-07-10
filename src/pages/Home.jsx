@@ -170,8 +170,8 @@ function Home() {
       </div>
     </section>
 
-      <section className="w-full bg-[#fbfdff] px-3 py-4 sm:px-5 md:px-7 lg:px-8">
-      <div className="mx-auto max-w-[1160px]">
+      <section className="w-full bg-[#fbfdff] px-5 py-4 sm:px-8 lg:min-h-[500px] lg:px-14 xl:px-14">
+      <div className="mx-auto max-w-[1400px]">
         <div className="grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
           {/* ABOUT THE JOURNAL */}
           <motion.article
@@ -183,12 +183,12 @@ function Home() {
             whileHover={{ y: -4 }}
             className="rounded-[9px] border border-[#e4eaf2] bg-white px-5 py-5 shadow-[0_4px_14px_rgba(15,44,88,0.08)] transition-shadow duration-300 hover:shadow-[0_12px_30px_rgba(15,44,88,0.14)] sm:px-6 sm:py-6"
           >
-            <h2 className="text-[12px] font-bold uppercase tracking-[0.02em] text-[#075bc7] sm:text-[13px]">
+            <h2 className="text-[16px] font-bold uppercase tracking-[0.02em] text-[#075bc7] sm:text-[18px]">
               About the Journal
             </h2>
-            <div className="mt-2 h-[2px] w-[28px] rounded-full bg-[#1876e8]" />
+            <div className="mt-1 h-[2px] w-[28px] rounded-full bg-[#1876e8]" />
 
-            <p className="mt-5 text-[12px] font-medium leading-[1.9] text-[#26374c] sm:text-[13px]">
+            <p className="mt-5 text-[14px] font-medium leading-[1.9] text-[#26374c] sm:text-[14px]">
               Artificial Intelligence Education Research and Review (AIERRR) is a
               peer-reviewed, open access journal dedicated to advancing the
               theory, research, and practice of artificial intelligence in
@@ -199,7 +199,7 @@ function Home() {
               administration.
             </p>
 
-            <p className="mt-5 text-[12px] font-medium leading-[1.9] text-[#26374c] sm:text-[13px]">
+            <p className="mt-5 text-[14px] font-medium leading-[1.9] text-[#26374c] sm:text-[14px]">
               We welcome high-quality original research, reviews, case studies,
               and theoretical papers that contribute to the ethical, effective,
               and inclusive integration of AI technologies in education across
@@ -217,10 +217,10 @@ function Home() {
             whileHover={{ y: -4 }}
             className="rounded-[9px] border border-[#e4eaf2] bg-white px-5 py-5 shadow-[0_4px_14px_rgba(15,44,88,0.08)] transition-shadow duration-300 hover:shadow-[0_12px_30px_rgba(15,44,88,0.14)] sm:px-6 sm:py-6"
           >
-            <h2 className="text-[12px] font-bold uppercase tracking-[0.02em] text-[#075bc7] sm:text-[13px]">
+            <h2 className="text-[16px] font-bold uppercase tracking-[0.02em] text-[#075bc7] sm:text-[18px]">
               Journal Information
             </h2>
-            <div className="mt-2 h-[2px] w-[28px] rounded-full bg-[#1876e8]" />
+            <div className="mt-1 h-[2px] w-[28px] rounded-full bg-[#1876e8]" />
 
             <div className="mt-3">
               {journalInfo.map((item, index) => {
@@ -235,9 +235,9 @@ function Home() {
                     whileHover={{ x: 5, backgroundColor: "#f7fbff" }}
                     className="group grid grid-cols-[34px_1fr] gap-3 border-b border-[#e8edf3] px-1 py-[9px] last:border-b-0"
                   >
-                    <Icon className="mt-[2px] h-[18px] w-[18px] text-[#183968] transition-transform duration-300 group-hover:scale-110 group-hover:text-[#0868d5]" />
+                    <Icon className="mt-[2px] h-[25px] w-[25px] text-[#183968] transition-transform duration-300 group-hover:scale-110 group-hover:text-[#0868d5]" />
                     <div>
-                      <p className="text-[11px] font-medium leading-none text-[#53657a]">
+                      <p className="text-[14px] font-medium leading-none text-[#53657a]">
                         {item.label}
                       </p>
                       {item.link ? (
@@ -245,12 +245,12 @@ function Home() {
                           href={item.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="mt-1 block break-all text-[11px] font-semibold leading-[1.45] text-[#0568cf] hover:underline"
+                          className="mt-1 block break-all text-[12px] font-semibold leading-[1.45] text-[#14273f] hover:underline"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="mt-1 whitespace-pre-line text-[11px] font-semibold leading-[1.45] text-[#14273f]">
+                        <p className="mt-1 whitespace-pre-line text-[12px] font-semibold leading-[1.45] text-[#14273f]">
                           {item.value}
                         </p>
                       )}
@@ -284,14 +284,14 @@ function Home() {
               >
                 <Icon className="h-[36px] w-[36px] text-[#075dc6] transition-all duration-300 group-hover:scale-110 group-hover:text-[#004ca8]" strokeWidth={1.7} />
                 <div className="mt-3 flex items-baseline justify-center gap-1 text-[#17243a]">
-                  <span className="text-[28px] font-semibold leading-none sm:text-[30px]">
+                  <span className="text-[24px] font-[500] leading-none sm:text-[26px]">
                     {item.value}
                   </span>
                   {item.suffix && (
-                    <span className="text-[18px] font-medium">{item.suffix}</span>
+                    <span className="text-[16px] font-medium">{item.suffix}</span>
                   )}
                 </div>
-                <p className="mt-3 whitespace-pre-line text-[11px] font-medium leading-[1.55] text-[#28384d]">
+                <p className="mt-3 whitespace-pre-line text-[12px] font-medium leading-[1.55] text-[#28384d]">
                   {item.text}
                 </p>
               </motion.div>
@@ -308,13 +308,13 @@ function Home() {
           className="mt-5 overflow-hidden rounded-[9px] border border-[#e4eaf2] bg-white shadow-[0_4px_14px_rgba(15,44,88,0.08)]"
         >
           <div className="flex flex-col gap-3 border-b border-[#e7ecf2] px-5 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
-            <h2 className="text-[11px] font-bold uppercase tracking-[0.02em] text-[#075bc7] sm:text-[12px]">
+            <h2 className="text-[16px] font-[600] uppercase tracking-[0.02em] text-[#075bc7] sm:text-[18px]">
               Recently Published Articles
             </h2>
             <motion.a
               whileHover={{ x: 4 }}
               href="/articles"
-              className="inline-flex items-center gap-1 self-start text-[11px] font-semibold text-[#0568cf] sm:self-auto"
+              className="inline-flex items-center gap-1 self-start text-[13px] font-semibold text-[#0568cf] sm:self-auto"
             >
               View All Articles <ArrowRight className="h-[14px] w-[14px]" />
             </motion.a>
@@ -331,15 +331,15 @@ function Home() {
                 whileHover={{ x: 5, backgroundColor: "#f8fbff" }}
                 className="group grid gap-3 border-b border-[#e8edf3] py-3 last:border-b-0 sm:grid-cols-[48px_1fr_auto] sm:items-center"
               >
-                <div className="flex h-[42px] w-[42px] items-center justify-center rounded-[5px] bg-[#eef6ff] text-[#0868d5] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#e3f0ff]">
-                  <FileText className="h-[21px] w-[21px]" strokeWidth={1.8} />
+                <div className="flex h-[44px] w-[44px] items-center justify-center rounded-[5px] bg-[#eef6ff] text-[#0868d5] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#e3f0ff]">
+                  <FileText className="h-[23px] w-[23px]" strokeWidth={1.8} />
                 </div>
 
                 <div className="min-w-0">
-                  <h3 className="text-[11px] font-semibold leading-[1.5] text-[#17243a] sm:text-[12px]">
+                  <h3 className="text-[12px] font-semibold leading-[1.5] text-[#17243a] sm:text-[14px]">
                     {article.title}
                   </h3>
-                  <p className="mt-1 text-[10px] font-medium leading-[1.5] text-[#637188] sm:text-[11px]">
+                  <p className="mt-1 text-[12px] font-medium leading-[1.5] text-[#637188] sm:text-[12px]">
                     {article.meta}
                   </p>
                 </div>
