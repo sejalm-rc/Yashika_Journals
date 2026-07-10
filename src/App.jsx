@@ -10,7 +10,8 @@ import Authors from "./pages/Authors";
 import Journals from "./pages/Journals";
 import Reviewers from "./pages/Reviewers";
 import Resources from "./pages/Resources";
-import Services from "./pages/Services";
+import EditorialBoard from "./pages/EditorialBoard";
+import AuthorGuidlines from "./pages/AuthorGuidelines";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -26,7 +27,8 @@ const AnimatedRoutes = () => {
         <Route path="/journals" element={<Journals />} />
         <Route path="/reviewers" element={<Reviewers />} />
         <Route path="/resources" element={<Resources />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/editorial-board" element={<EditorialBoard />} />
+        <Route path="/author-guidelines" element={<AuthorGuidlines />} />
         <Route path="/contact" element={<Contact />} />
         {/* Fallback route - redirect unknown paths to Home content (SPA friendly) */}
         <Route path="*" element={<Home />} />
