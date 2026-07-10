@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: "Poppins", "ui-sans-serif", system-ui, sans-serif;
+  background-color: #ffffff;
+  color: #0b1d3a;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #eef1f7;
+}
+::-webkit-scrollbar-thumb {
+  background: #0fb5ba;
+  border-radius: 8px;
+}
+
+@layer components {
+  .container-x {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-py {
+    @apply py-12 md:py-16 lg:py-20;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md bg-amber-400 px-6 py-3 text-sm md:text-base font-semibold text-navy-900 shadow-md transition-all duration-300 hover:bg-amber-500 hover:shadow-lg hover:scale-105 active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-white px-6 py-3 text-sm md:text-base font-semibold text-white transition-all duration-300 hover:bg-white hover:text-navy-900 hover:scale-105 active:scale-95;
+  }
+
+  .btn-outline-teal {
+    @apply inline-flex items-center justify-center gap-2 rounded-md border-2 border-teal-500 px-6 py-3 text-sm md:text-base font-semibold text-teal-600 transition-all duration-300 hover:bg-teal-500 hover:text-white hover:scale-105 active:scale-95;
+  }
+
+  .card {
+    @apply rounded-xl bg-white shadow-card transition-all duration-300 hover:-translate-y-2 hover:shadow-card-hover;
+  }
+
+  .input-field {
+    @apply w-full rounded-md border border-navy-100 bg-white px-4 py-3 text-sm text-navy-900 outline-none transition-all duration-300 placeholder:text-navy-300 focus:border-teal-500 focus:shadow-glow;
+  }
+
+  .section-tag {
+    @apply inline-block rounded-full bg-teal-50 px-4 py-1 text-xs md:text-sm font-semibold tracking-wide text-teal-600;
+  }
+
+  .nav-link {
+    @apply relative text-sm font-medium text-white/90 transition-colors duration-300 hover:text-teal-300 after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-0 after:bg-teal-400 after:transition-all after:duration-300 hover:after:w-full;
+  }
+
+  .nav-link-active {
+    @apply text-teal-300 after:w-full;
+  }
+}
+
+.review-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #d5d9e3;
+  opacity: 1;
+  transition: all .3s;
+}
+
+.review-pagination .swiper-pagination-bullet-active {
+  width: 28px;
+  border-radius: 999px;
+  background: #0a3da9;
+}
+
+.review-prev,
+.review-next {
+  cursor: pointer;
+}
+
+.review-prev.swiper-button-disabled,
+.review-next.swiper-button-disabled {
+  opacity: .35;
+  pointer-events: none;
+}
