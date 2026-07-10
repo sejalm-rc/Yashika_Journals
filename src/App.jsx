@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Authors from "./pages/Authors";
+
 import Journals from "./pages/Journals";
 import EditorialBoard from "./pages/EditorialBoard";
 import AuthorGuidlines from "./pages/AuthorGuidelines";
@@ -24,7 +24,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/authors" element={<Authors />} />
+       
         <Route path="/journals" element={<Journals />} />
         <Route path="/article-processing-charges" element={<ArticleProcessingCharges />} />
         <Route path="/editorial-board" element={<EditorialBoard />} />
