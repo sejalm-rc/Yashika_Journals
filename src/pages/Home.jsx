@@ -30,7 +30,7 @@ import {
   FaBullseye,
 } from "react-icons/fa";
 
-import heroImg from "../assets/yashika-publication-home-hero-banner.webp";
+import heroImg from "../assets/yashika-journal-home-hero-banner.webp";
 import aboutImg from "../assets/yashika-publication-about-company.webp";
 import { ArrowRight, BadgeCheck, BrainCircuit, ChartNoAxesCombined, CloudCog, FilePenLine, LockKeyhole, Monitor, Network, PencilLine, ShieldCheck, UsersRound } from "lucide-react";
 
@@ -215,7 +215,6 @@ function Home() {
         className="relative min-h-[480px] bg-cover bg-center bg-no-repeat sm:min-h-[490px] lg:min-h-[500px]"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
-        
 
         <div className="relative z-10 mx-auto flex min-h-[490px] max-w-[1400px] items-center px-5 py-10 sm:min-h-[490px] sm:px-8 lg:min-h-[500px] lg:px-14 xl:px-14">
           <motion.div
@@ -226,21 +225,17 @@ function Home() {
           >
             <motion.p
               whileHover={{ x: 5 }}
-              className="mb-4 text-[18px] font-semibold leading-[1.35] text-[#ff8a00] sm:text-[20px] lg:text-[22px]"
+              className="mb-4 text-[14px] font-[500] text-[#ff8a00]"
             >
-              Advancing Knowledge.
-              <br />
-              Empowering Innovation.
+              Peer Review Journal
             </motion.p>
 
-            <h1 className="max-w-[620px] text-[34px] font-[600] leading-[1.12] tracking-[-0.8px] text-white sm:text-[36px] md:text-[38px] lg:text-[40px]">
-              India’s Leading Publisher in Computer, IT & AI Education
+            <h1 className="max-w-[400px] text-[34px] font-[600] leading-[1.12] tracking-[-0.8px] text-white sm:text-[36px] md:text-[38px] lg:text-[40px]">
+              Artificial Intelligence Education Research and Review
             </h1>
 
             <p className="mt-4 max-w-[470px] text-[14px] font-medium leading-[1.8] text-white/85 sm:text-[14px] lg:text-[15px]">
-              Yashika Publications is committed to publishing high-quality,
-              impactful research that drives innovation and shapes the future of
-              technology and education.
+              Advance knowledge and innovation at the intersection of Artificial Intelligence and Education.
             </p>
 
             <div className="mt-6 grid max-w-[650px] grid-cols-2 gap-2 sm:grid-cols-4">
