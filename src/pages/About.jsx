@@ -1,464 +1,511 @@
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
+  FaBookOpen,
+  FaBuilding,
   FaCalendarAlt,
-  FaGraduationCap,
-  FaUsers,
-  FaAward,
-  FaFlag,
   FaGlobe,
-  FaUnlockAlt,
-  FaStar,
-  FaShieldAlt,
-  FaRocket,
-  FaChartLine,
+  FaLanguage,
   FaUserCheck,
   FaFileAlt,
-  FaPaperPlane,
-   FaChevronRight
+  FaBullseye,
+  FaUsers,
+  FaLightbulb,
+  FaChartLine,
+  FaHandshake,
+  FaGraduationCap,
+  FaClipboardCheck,
+  FaLaptopCode,
+  FaUniversity,
+  FaBalanceScale,
+  FaBrain,
+  FaChevronRight,
 } from "react-icons/fa";
+
 import PageTransition from "../components/PageTransition";
 
-import HeroBg from "../assets/yashika-publication-about-us-banner.webp";
-import WhoImage from "../assets/yashika-publication-about-company.webp";
-import WhyImage from "../assets/yashika-publication-editorial-team.webp";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 35 },
-  show: { opacity: 1, y: 0 },
-};
+import aboutHero from "../assets/yashika-journal-home-hero-banner.webp";
+// import journalBook from "../assets/aierr-journal-book.webp";
 
-const features = [
+const overviewItems = [
+  {
+    icon: <FaBuilding />,
+    label: "Publisher",
+    value: "Yashika Publications",
+  },
   {
     icon: <FaCalendarAlt />,
-    title: "12+ Years",
-    desc: "of Publishing Excellence",
+    label: "Frequency",
+    value: "Quarterly (4 Issues per Year)",
   },
   {
-    icon: <FaGraduationCap />,
-    title: "Specialized in AI, IT",
-    desc: "& Education Publishing",
-  },
-  {
-    icon: <FaUsers />,
-    title: "Global Network of",
-    desc: "Authors, Editors & Reviewers",
-  },
-  {
-    icon: <FaAward />,
-    title: "Commitment to",
-    desc: "Quality, Integrity & Open Access",
-  },
-];
-
-const milestones = [
-  {
-    year: "2006",
-    icon: <FaFlag />,
-    color: "bg-blue-100 text-blue-700 border-blue-200",
-    text: "Yashika Publications was founded with a vision to promote quality research.",
-  },
-  {
-    year: "2011",
-    icon: <FaUsers />,
-    color: "bg-orange-100 text-orange-600 border-orange-200",
-    text: "Expanded our editorial board and launched our first set of journals in emerging fields.",
-  },
-  {
-    year: "2016",
     icon: <FaGlobe />,
-    color: "bg-blue-100 text-blue-700 border-blue-200",
-    text: "Enhanced global collaborations and strengthened our peer review process.",
+    label: "Access",
+    value: "Open Access",
   },
   {
-    year: "2021",
-    icon: <FaUnlockAlt />,
-    color: "bg-green-100 text-green-600 border-green-200",
-    text: "Embraced Open Access publishing to ensure wider visibility and greater impact.",
-  },
-  {
-    year: "2026",
-    icon: <FaStar />,
-    color: "bg-purple-100 text-purple-600 border-purple-200",
-    text: "Continuing to innovate and set new standards in academic publishing excellence.",
-  },
-];
-
-const trustCards = [
-  {
-    icon: <FaShieldAlt />,
-    title: "Rigorous Quality",
-    desc: "Strict peer review and editorial standards.",
-  },
-  {
-    icon: <FaRocket />,
-    title: "Global Reach",
-    desc: "Authors and readers from 100+ countries.",
-  },
-  {
-    icon: <FaChartLine />,
-    title: "High Visibility",
-    desc: "Indexed in leading databases for maximum impact.",
+    icon: <FaLanguage />,
+    label: "Language",
+    value: "English",
   },
   {
     icon: <FaUserCheck />,
-    title: "Ethical Publishing",
-    desc: "Transparency, integrity, and best practices.",
+    label: "Peer Review",
+    value: "Double Blind",
+  },
+  {
+    icon: <FaFileAlt />,
+    label: "Type",
+    value: "Scholarly Journal",
   },
 ];
+
+const aims = [
+  {
+    icon: <FaBullseye />,
+    title: "To advance knowledge",
+    description:
+      "Advance the theory and practice of artificial intelligence in education through high-quality research.",
+  },
+  {
+    icon: <FaUsers />,
+    title: "To bridge communities",
+    description:
+      "Bridge researchers, educators, practitioners, and policymakers by sharing innovative and practical insights.",
+  },
+  {
+    icon: <FaLightbulb />,
+    title: "To promote innovation",
+    description:
+      "Promote the innovative use of AI technologies to improve teaching, learning, assessment, and administration.",
+  },
+  {
+    icon: <FaChartLine />,
+    title: "To inform policy",
+    description:
+      "Inform educational policy and practice with evidence-based research and real-world applications.",
+  },
+  {
+    icon: <FaHandshake />,
+    title: "To encourage collaboration",
+    description:
+      "Encourage collaboration across disciplines and sectors to address emerging educational challenges.",
+  },
+];
+
+const scopeRows = [
+  {
+    icon: <FaGraduationCap />,
+    area: "AI in Teaching and Learning",
+    topics:
+      "Intelligent tutoring systems, adaptive learning, personalized learning, AI-enhanced instruction, learning analytics, and learner modelling.",
+  },
+  {
+    icon: <FaClipboardCheck />,
+    area: "Assessment and Evaluation",
+    topics:
+      "Automated grading, intelligent assessment, learning analytics for assessment, feedback systems, and educational data mining.",
+  },
+  {
+    icon: <FaLaptopCode />,
+    area: "AI Technologies and Tools",
+    topics:
+      "Natural language processing, computer vision, machine learning, deep learning, chatbots, virtual agents, and AI educational platforms.",
+  },
+  {
+    icon: <FaUniversity />,
+    area: "Educational Administration",
+    topics:
+      "AI in decision making, institutional management, student support systems, policy design, and resource optimization.",
+  },
+  {
+    icon: <FaBalanceScale />,
+    area: "Ethics and Policy",
+    topics:
+      "Ethical issues, bias and fairness, data privacy, responsible AI, AI governance, and policy frameworks.",
+  },
+  {
+    icon: <FaBrain />,
+    area: "Emerging Trends",
+    topics:
+      "Generative AI in education, AI for inclusive education, human-AI collaboration, future of AI in education.",
+  },
+];
+
+const fadeUp = {
+  hidden: {
+    opacity: 0,
+    y: 28,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 
 const About = () => {
   return (
     <PageTransition>
-      {/* HERO */}
-      <section
-        className="relative min-h-[380px] overflow-hidden bg-cover bg-center text-white md:min-h-[430px]"
-        style={{ backgroundImage: `url(${HeroBg})` }}
-      >
-        {/* <div className="absolute inset-0 bg-gradient-to-r from-[#001f4f] via-[#002c68]/90 to-transparent" /> */}
+      <main className="overflow-hidden bg-white">
+        {/* Hero */}
+        <section className="relative overflow-hidden ">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${aboutHero})`,
+            }}
+          />
 
-        <div className="relative z-10 mx-auto flex min-h-[390px] max-w-[1400px] items-center px-8  py-10 sm:px-8 lg:px-14 xl:px-16">
-          <motion.div5
-            initial="hidden"
-            animate="show"
-            variants={fadeUp}
-            transition={{ duration: 0.6 }}
-            className="max-w-xl"
-          >
-            {/* <p className="mb-6 text-[12px] font-[500]">
-              Home &nbsp;›&nbsp; About Us
-            </p> */}
-            <div className="flex items-center gap-2 text-sm text-white/80 sm:mt-9 mt-5 mb-4">
-  <Link
-    to="/"
-    className="transition duration-300 hover:text-[#ff9b21]"
-  >
-    Home
-  </Link>
+          
+          <div className="relative mx-auto min-h-[500px] max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
+            <div className="grid min-h-[500px] items-center gap-8 lg:grid-cols-[1fr_0.9fr]">
+              {/* Hero content */}
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate="visible"
+                transition={{
+                  duration: 0.65,
+                  ease: "easeOut",
+                }}
+                className="relative z-10 max-w-[600px] py-14 lg:py-10"
+              >
+                <div className="mb-7 flex flex-wrap items-center gap-2 text-[13px] font-[500]">
+                  <Link
+                    to="/"
+                    className="text-[#ff7800] transition-colors duration-300 hover:text-white"
+                  >
+                    Home
+                  </Link>
 
-  <FaChevronRight className="text-[10px]" />
+                  <FaChevronRight className="text-[8px] text-white/70" />
 
-  <span className="font-medium text-white">
-    About Us
-  </span>
-</div>
+                  <span className="text-white">About the Journal</span>
+                </div>
 
-            <h1 className="text-[36px] font-[600] leading-tight sm:text-[40px] md:text-[44px]">
-              About Us
-            </h1>
+                <h1 className="text-[36px] font-[600] leading-[1.1] tracking-[-1px] text-white sm:text-[40px] lg:text-[42px]">
+                  About the Journal
+                </h1>
 
-            <div className="mt-4 h-1 w-12 bg-[#ff7a00]" />
+                <div className="mt-3 h-[3px] w-[42px] bg-[#ff6b00] rounded-full" />
 
-            <h2 className="mt-4 text-[18px] font-[500] leading-snug md:text-[22px]">
-              Advancing Knowledge,
-              <br />
-              Empowering Innovation.
-            </h2>
+                <p className="mt-6 max-w-[520px] text-[17px] font-[400] leading-[1.55] text-white sm:text-[17px]">
+                  Artificial Intelligence Education Research
+                  <br className="hidden sm:block" />
+                  and Review (AIERRR)
+                </p>
+              </motion.div>
 
-            <p className="mt-4 max-w-lg font-medium text-[15px] leading-8 text-white/90">
-              Yashika Publications is a trusted academic publisher committed to
-              advancing research and education in the fields of Computer
-              Science, Information Technology, and AI Education.
-            </p>
-          </motion.div5>
-        </div>
-      </section>
+              {/* Journal book */}
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  x: 70,
+                  rotateY: -12,
+                }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  rotateY: 0,
+                }}
+                transition={{
+                  duration: 0.85,
+                  ease: "easeOut",
+                }}
+                className="relative hidden h-full items-end justify-center lg:flex"
+              >
+              
 
-      {/* WHO WE ARE */}
-      <section className="relative mx-auto max-w-[1180px] bg-white px-8 py-10 sm:px-4">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, x: -35 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.65 }}
-          >
-            <p className="text-[14px] font-[500] uppercase text-[#ff6b00]">
-              Who We Are
-            </p>
-
-            <h2 className="mt-3 max-w-md text-[24px] font-[600] leading-tight text-[#00245d] md:text-[28px]">
-              A Legacy of Excellence in Academic Publishing
-            </h2>
-
-            <div className="mt-5 h-1 w-12 bg-[#ff6b00]" />
-
-            <p className="mt-6 text-[14px] leading-6 text-gray-700">
-              With over 20 years of unwavering commitment, Yashika Publications
-              has established itself as a leading academic publisher in India.
-              We specialize in high-quality, peer-reviewed content that drives
-              innovation and academic excellence in Computer Science, IT, and AI
-              Education.
-            </p>
-
-            <p className="mt-4 text-[14px] leading-6 text-gray-700">
-              Our mission is to empower researchers, academicians, and students
-              by providing a global platform for knowledge sharing and impactful
-              research.
-            </p>
-
-            <div className="mt-9 grid grid-cols-2 gap-4 sm:grid-cols-4">
-              {features.map((item, i) => (
-                <motion.div
-                  key={i}
-                  whileHover={{ y: -8, scale: 1.03 }}
-                  transition={{ type: "spring", stiffness: 260 }}
-                  className="flex min-h-[165px] flex-col items-center justify-start border-gray-200 px-2 text-center sm:border-r sm:last:border-r-0"
-                >
-                  <div className="mb-4 flex h-12 items-center justify-center text-[34px] text-[#004aad]">
-                    {item.icon}
-                  </div>
-
-                  <h4 className="flex h-[42px] items-center justify-center text-[12px] font-medium leading-5 text-[#061d45]">
-                    {item.title}
-                  </h4>
-
-                  <p className="mt-2 flex h-[60px] items-start justify-center text-[12px] font-medium leading-5 text-gray-600">
-                    {item.desc}
-                  </p>
-                </motion.div>
-              ))}
+                <div className="absolute bottom-[9px] h-7 w-[250px] rounded-full bg-black/35 blur-xl" />
+              </motion.div>
             </div>
-          </motion.div>
+          </div>
+        </section>
 
-          <motion.div
-            initial={{ opacity: 0, x: 35 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.65 }}
-            className="relative pb-14 sm:pb-12 lg:pb-0"
-          >
-            <img
-              src={WhoImage}
-              alt="Yashika Publications Office"
-              className="h-[260px] w-full rounded-xl object-cover shadow-xl sm:h-[340px] lg:h-[400px]"
-            />
-
+        {/* About and overview */}
+        <section className="px-5 py-8 sm:px-8 lg:px-12 lg:py-8 xl:px-16">
+          <div className="mx-auto grid max-w-[1380px] items-start gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:gap-10">
+            {/* About content */}
             <motion.div
-              whileHover={{ scale: 1.04 }}
-              className="absolute -bottom-2 left-4 right-4 flex items-center gap-4 rounded-2xl bg-[#052148] p-4 text-white shadow-2xl sm:left-8 sm:right-8 sm:p-5 lg:-bottom-10 lg:left-10 lg:right-10"
+              initial={{
+                opacity: 0,
+                x: -30,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              transition={{
+                duration: 0.6,
+              }}
             >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/40 text-[26px] sm:h-16 sm:w-16 sm:text-3xl">
-                <FaRocket />
-              </div>
+              <SectionHeading title="About the Journal" />
 
-              <div>
-                <h3 className="text-[15px] font-[500]">Our Commitment</h3>
-                <p className="mt-1 text-[12px] leading-5 text-white/90 sm:leading-6">
-                  To publish research that solves real-world challenges and
-                  contributes to a smarter, more innovative future.
+              <div className="mt-5  text-[13px] font-[400] leading-7 text-[#334357] sm:text-[14px]">
+                <p>
+                  Artificial Intelligence Education Research and Review
+                  (AIERRR) is a peer-reviewed, open access journal dedicated to
+                  advancing the theory, research, and practice of artificial
+                  intelligence in education.
+               
+                  The journal provides a platform for researchers, educators,
+                  practitioners, and policymakers to share innovative ideas,
+                  empirical studies, and practical applications that explore
+                  the role of AI in teaching, learning, assessment, and
+                  educational administration.
                 </p>
               </div>
             </motion.div>
-          </motion.div>
-        </div>
-      </section>
-      {/* MILESTONES */}
-      <section className="bg-[#f7fbff] px-5 py-10">
-        <div className="relative mx-auto  max-w-[1180px] px-8 py-10 sm:px-4">
-          <div className="grid gap-12 lg:grid-cols-[280px_1fr]">
-            <motion.div
-              initial={{ opacity: 0, x: -35 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <p className="text-[14px] font-[500] uppercase text-[#ff6b00]">
-                Our Journey
-              </p>
 
-              <h2 className="mt-3 max-w-md text-[24px] font-[600] leading-tight text-[#00245d] md:text-[28px]">
-                Milestones That Define Us
+            {/* Overview card */}
+            <motion.div
+              initial={{
+                opacity: 0,
+                x: 30,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.2,
+              }}
+              transition={{
+                duration: 0.6,
+              }}
+              whileHover={{
+                y: -5,
+                boxShadow: "0 18px 45px rgba(5, 46, 105, 0.12)",
+              }}
+              className="rounded-[8px] border border-[#dce4ef] bg-white p-5 shadow-[0_7px_24px_rgba(10,43,84,0.08)] sm:p-6"
+            >
+              <h2 className="mb-2 text-[18px] font-[600] text-[#0c3372]">
+                Journal Overview
               </h2>
 
-              <div className="mt-5 h-1 w-12 bg-[#ff6b00]" />
+              <div className="overflow-hidden rounded-[5px] border border-[#e1e6ed]">
+                {overviewItems.map((item, index) => (
+                  <motion.div
+                    key={item.label}
+                    whileHover={{
+                      backgroundColor: "#f5f6f7",
+                    }}
+                    className={`grid grid-cols-[38px_100px_1fr]  items-center text-[11px] sm:grid-cols-[42px_130px_1fr] sm:text-[12px] ${
+                      index !== overviewItems.length - 1
+                        ? "border-b border-[#e2e7ee]"
+                        : ""
+                    }`}
+                  >
+                    <div className="flex h-full min-h-[42px] items-center justify-center border-r border-[#e2e7ee] text-[14px] text-[#264fa3]">
+                      {item.icon}
+                    </div>
 
-              <p className="mt-6 text-[14px] leading-6 text-gray-700">
-                From a humble beginning to becoming a trusted name in academic
-                publishing, our journey has been fueled by passion,
-                perseverance, and purpose.
-              </p>
+                    <div className="flex min-h-[42px] items-center border-r border-[#e2e7ee] px-3 font-[500] text-[#334155]">
+                      {item.label}
+                    </div>
 
-              <motion.a
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.96 }}
-                href="/journals"
-                className="mt-6 inline-flex items-center gap-2 rounded-md bg-[#004aad] px-6 py-3 text-[12px] font-[500] text-white shadow-lg hover:bg-[#003b8f]"
-              >
-                Explore Our Journals →
-              </motion.a>
+                    <div className="flex min-h-[42px] items-center px-3 font-[600] text-[#19243a]">
+                      {item.value}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Aims and Scope */}
+        <section className="px-5 pb-10 sm:px-8 lg:px-12 xl:px-16">
+          <div className="mx-auto max-w-[1380px]">
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 25,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.15,
+              }}
+              transition={{
+                duration: 0.6,
+              }}
+            >
+              <SectionHeading title="Aims and Scope" />
             </motion.div>
 
-            <div className="relative grid gap-10 md:grid-cols-5">
-              <div className="absolute left-0 right-0 top-[82px] hidden h-px bg-gray-300 md:block" />
+            {/* Aims */}
+            <div className="mt-6">
+              <h3 className="mb-2 text-[17px] font-[600] text-[#2966ce]">
+                Aims
+              </h3>
 
-              {milestones.map((item, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 35 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.55, delay: i * 0.1 }}
-                  className="relative text-center"
-                >
-                  <motion.div
-                    whileHover={{ y: -8, scale: 1.08 }}
-                    className={`mx-auto flex h-16 w-16 items-center justify-center rounded-full border text-[30px] shadow-sm ${item.color}`}
-                  >
-                    {item.icon}
-                  </motion.div>
-
-                  <div className="mx-auto mt-5 h-4 w-4 rounded-full bg-[#004aad] md:mt-6" />
-
-                  <h3 className="mt-5 text-[14px] font-[500] text-[#061d45]">
-                    {item.year}
-                  </h3>
-
-                  <p className="mt-4 text-[13px] leading-6 text-gray-700">
-                    {item.text}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* WHY CHOOSE US */}
-      <section className="relative mx-auto  max-w-[1180px] px-8 py-10 sm:px-4 bg-white">
-        <div className="mx-auto grid items-center gap-8 lg:grid-cols-[250px_minmax(0,1fr)_270px]">
-          {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -35 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-[14px] font-[500] uppercase text-[#ff6b00]">
-              Why Choose Us
-            </p>
-
-            <h2 className="mt-3 text-[24px] font-[600] leading-tight text-[#00245d] md:text-[28px]">
-              Built on Trust.
-              <br />
-              Driven by Impact.
-            </h2>
-
-            <div className="mt-4 h-1 w-12 bg-[#ff6b00]" />
-
-            <p className="mt-4 text-[14px] leading-6 text-gray-700">
-              We combine global publishing standards with local insight to
-              deliver a world-class publishing experience.
-            </p>
-          </motion.div>
-
-          {/* Cards */}
-          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
-            {trustCards.map((card, i) => (
               <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 35 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                whileHover={{
-                  y: -8,
-                  scale: 1.02,
-                  boxShadow: "0 18px 35px rgba(0,74,173,.12)",
+                initial={{
+                  opacity: 0,
+                  y: 22,
                 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.45, delay: i * 0.08 }}
-                className="flex h-[200px] flex-col items-center rounded-[16px] border border-[#E8EDF5] bg-white px-2 py-4 text-center shadow-[0_4px_18px_rgba(0,0,0,0.05)]"
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.1,
+                }}
+                transition={{
+                  duration: 0.55,
+                }}
+                className="overflow-hidden rounded-[7px] border border-[#dce4ee]"
               >
-                {/* Fixed Icon Area */}
-                <div className="flex h-[44px] items-center justify-center">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-[#004aad] text-[22px] text-[#004aad]">
-                    {card.icon}
+                {aims.map((item, index) => (
+                  <motion.div
+                    key={item.title}
+                    whileHover={{
+                      backgroundColor: "#f5f9ff",
+                    }}
+                    className={`grid grid-cols-1 sm:grid-cols-[58px_220px_1fr] ${
+                      index !== aims.length - 1
+                        ? "border-b border-[#dce4ee]"
+                        : ""
+                    }`}
+                  >
+                    <div className="flex min-h-[48px] items-center justify-center border-b border-[#dce4ee] text-[17px] text-[#274fa1] sm:border-b-0 sm:border-r">
+                      {item.icon}
+                    </div>
+
+                    <div className="flex min-h-[48px] items-center border-b border-[#dce4ee] px-4 text-[12px] font-[600] text-[#123a7b] sm:border-b-0 sm:border-r">
+                      {item.title}
+                    </div>
+
+                    <div className="flex min-h-[48px] items-center px-4 py-3 text-[11px] leading-[1.65] text-[#354052] sm:text-[12px]">
+                      {item.description}
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </div>
+
+            {/* Scope */}
+            <div className="mt-8">
+              <h3 className="mb-2 text-[17px] font-[600] text-[#2966ce]">
+                Scope
+              </h3>
+
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 22,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                  amount: 0.1,
+                }}
+                transition={{
+                  duration: 0.55,
+                }}
+                className="overflow-hidden rounded-[7px] border border-[#d9e1ec]"
+              >
+                {/* Desktop table */}
+                <div className="hidden md:block">
+                  <div className="grid grid-cols-[58px_275px_1fr] bg-[#082d68] text-[12px] font-[600] text-white">
+                    <div className="flex min-h-[38px] items-center justify-center border-r border-white/15">
+                      <FaBookOpen />
+                    </div>
+
+                    <div className="flex min-h-[38px] items-center border-r border-white/15 px-4">
+                      Area
+                    </div>
+
+                    <div className="flex min-h-[38px] items-center px-4">
+                      Topics Include
+                    </div>
                   </div>
+
+                  {scopeRows.map((item, index) => (
+                    <motion.div
+                      key={item.area}
+                      whileHover={{
+                        backgroundColor: "#f3f8ff",
+                      }}
+                      className={`grid grid-cols-[58px_275px_1fr] ${
+                        index !== scopeRows.length - 1
+                          ? "border-b border-[#dce4ee]"
+                          : ""
+                      }`}
+                    >
+                      <div className="flex min-h-[54px] items-center justify-center border-r border-[#dce4ee] text-[17px] text-[#274fa1]">
+                        {item.icon}
+                      </div>
+
+                      <div className="flex min-h-[54px] items-center border-r border-[#dce4ee] px-4 text-[12px] font-[600] text-[#173d7d]">
+                        {item.area}
+                      </div>
+
+                      <div className="flex min-h-[54px] items-center px-4 py-3 text-[12px] leading-[1.55] text-[#354052]">
+                        {item.topics}
+                      </div>
+                    </motion.div>
+                  ))}
                 </div>
 
-                {/* Fixed Title Area */}
-                <div className="mt-4 flex h-[40px] items-center justify-center">
-                  <h3 className="text-[13px] font-[550] leading-5 text-[#061d45]">
-                    {card.title}
-                  </h3>
-                </div>
+                {/* Mobile cards */}
+                <div className="space-y-3 bg-[#f7f9fc] p-3 md:hidden">
+                  {scopeRows.map((item) => (
+                    <motion.div
+                      key={item.area}
+                      whileHover={{
+                        y: -3,
+                      }}
+                      className="rounded-[6px] border border-[#dce4ee] bg-white p-4 shadow-sm"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#edf4ff] text-[#274fa1]">
+                          {item.icon}
+                        </div>
 
-                {/* Fixed Description Area */}
-                <div className="mt-1 flex h-[70px] items-start justify-center">
-                  <p className="text-[11px] leading-6 text-gray-700">
-                    {card.desc}
-                  </p>
+                        <h4 className="text-[13px] font-[600] text-[#173d7d]">
+                          {item.area}
+                        </h4>
+                      </div>
+
+                      <p className="mt-3 text-[12px] leading-[1.7] text-[#465165]">
+                        {item.topics}
+                      </p>
+                    </motion.div>
+                  ))}
                 </div>
               </motion.div>
-            ))}
+            </div>
           </div>
-
-          {/* Right Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 35 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="relative  hidden h-[240px] w-[430px] overflow-hidden lg:block"
-            style={{
-              clipPath: "polygon(18% 0, 100% 0, 100% 100%, 0 100%)",
-            }}
-          >
-            <img
-              src={WhyImage}
-              alt="Team Collaboration"
-              className="h-full w-full object-cover object-right"
-            />
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <div className="mb-6">
-    <section className="relative overflow-hidden bg-[#004b93] px-5 py-8 text-white sm:py-8 ">
-  <div className="absolute right-0 top-0 h-full w-[240px] opacity-35 ">
-    <div className="h-full w-full bg-[radial-gradient(circle,#28b8ff_2px,transparent_2px)] [background-size:18px_18px]" />
-  </div>
-
-  <motion.div
-    initial={{ opacity: 0, y: 25 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.6 }}
-    className="relative z-10 mx-auto flex max-w-[1170px] flex-col items-center justify-between gap-7 md:flex-row"
-  >
-    <div className="flex flex-col items-center gap-5 text-center sm:flex-row sm:text-left">
-      <motion.div
-        whileHover={{ scale: 1.08, rotate: 3 }}
-        className="flex h-[75px] w-[75px] items-center justify-center rounded-full border-2 border-white/70 text-[38px]"
-      >
-        <FaFileAlt />
-      </motion.div>
-
-      <div>
-        <h2 className="text-[24px] font-medium leading-tight sm:text-[24px]">
-          Ready to Publish Your Research?
-        </h2>
-        <p className="mt-1 max-w-[560px] text-[14px] font-medium leading-6 text-white/90 sm:text-[14px]">
-          Join thousands of researchers worldwide who trust <br className="hidden sm:block" />
-          Yashika Publications for quality and impact.
-        </p>
-      </div>
-    </div>
-
-    <motion.a
-      whileHover={{
-        scale: 1.06,
-        boxShadow: "0 0 25px rgba(255,255,255,0.45)",
-      }}
-      whileTap={{ scale: 0.96 }}
-      href="/journals"
-      className="inline-flex h-[50px] sm:mr-10 mr-0 min-w-[220px] items-center justify-center gap-3 rounded-[6px] bg-white px-6 text-[15px] font-semibold text-[#063a70] shadow-xl transition duration-300 hover:bg-[#f2f7ff]"
-    >
-      Submit Your Paper <FaPaperPlane className="text-[18px]" />
-    </motion.a>
-  </motion.div>
-</section></div>
+        </section>
+      </main>
     </PageTransition>
+  );
+};
+
+const SectionHeading = ({ title }) => {
+  return (
+    <div>
+      <h2 className="text-[22px] font-[600] tracking-[-0.3px] text-[#0b3473] sm:text-[24px]">
+        {title}
+      </h2>
+
+      <div className="mt-2 h-[3px] w-[36px] rounded-full bg-[#ff6b00]" />
+    </div>
   );
 };
 
