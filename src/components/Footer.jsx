@@ -71,7 +71,7 @@ const Footer = () => {
             <img
               src={logo}
               alt="Yashika Publications"
-              className="mb-4 h-[42px] w-auto object-contain"
+              className="mb-3 h-[52px] w-auto object-contain"
             />
 
             <p className="max-w-[270px] text-[12px]  leading-[22px] text-white/90">
