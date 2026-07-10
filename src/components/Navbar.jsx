@@ -8,12 +8,12 @@ import logo from "../assets/yashika-publication-logo.webp";
 
 const navItems = [
   { name: "Home", path: "/" },
- 
+ { name: "About ", path: "/about" },
   { name: " Editorial Board", path: "/editorial-board" },
   
-  { name: " Authors", path: "/author-guidelines",  },
+  { name: "For Authors", path: "/author-guidelines",  },
 
-  { name: "About ", path: "/about" },
+  
   
   
  
