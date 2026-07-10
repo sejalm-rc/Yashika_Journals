@@ -8,16 +8,13 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Authors from "./pages/Authors";
 import Journals from "./pages/Journals";
-<<<<<<< HEAD
 import Reviewers from "./pages/Reviewers";
 import Resources from "./pages/Resources";
 import EditorialBoard from "./pages/EditorialBoard";
 import AuthorGuidlines from "./pages/AuthorGuidelines";
-=======
 import CurrentIssue from "./pages/CurrentIssue";
 import Archives from "./pages/Archives";
 import Services from "./pages/Services";
->>>>>>> 467f4a24476b94679bdfdb4444992c76fa881e17
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -31,16 +28,13 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/authors" element={<Authors />} />
         <Route path="/journals" element={<Journals />} />
-<<<<<<< HEAD
         <Route path="/reviewers" element={<Reviewers />} />
         <Route path="/resources" element={<Resources />} />
         <Route path="/editorial-board" element={<EditorialBoard />} />
         <Route path="/author-guidelines" element={<AuthorGuidlines />} />
-=======
         <Route path="/current-issue" element={<CurrentIssue />} />
         <Route path="/archives" element={<Archives />} />
         <Route path="/services" element={<Services />} />
->>>>>>> 467f4a24476b94679bdfdb4444992c76fa881e17
         <Route path="/contact" element={<Contact />} />
         {/* Fallback route - redirect unknown paths to Home content (SPA friendly) */}
         <Route path="*" element={<Home />} />
