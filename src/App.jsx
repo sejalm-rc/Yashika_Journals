@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Authors from "./pages/Authors";
 import Journals from "./pages/Journals";
-import Reviewers from "./pages/Reviewers";
+import CurrentIssue from "./pages/CurrentIssue";
 import Archives from "./pages/Archives";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
@@ -24,7 +24,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/authors" element={<Authors />} />
         <Route path="/journals" element={<Journals />} />
-        <Route path="/reviewers" element={<Reviewers />} />
+        <Route path="/current-issue" element={<CurrentIssue />} />
         <Route path="/archives" element={<Archives />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
