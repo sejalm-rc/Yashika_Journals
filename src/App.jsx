@@ -17,6 +17,7 @@ import Archives from "./pages/Archives";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import PublicationEthics from "./pages/authors/PublicationEthics";
+import PeerReviewProcess from "./pages/authors/PeerReviewProcess";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -33,9 +34,10 @@ const AnimatedRoutes = () => {
         <Route path="/author-guidelines" element={<AuthorGuidlines />} />
         <Route path="/current-issue" element={<CurrentIssue />} />
         <Route path="/archives" element={<Archives />} />
-        <Route path="/publication-ethics" element={<PublicationEthics />} />
-
-      
+        <Route path="/publication-ethics" element={<PublicationEthics />} /><Route
+  path="/peer-review-process"
+  element={<PeerReviewProcess />}
+/>
         <Route path="/contact" element={<Contact />} />
         {/* Fallback route - redirect unknown paths to Home content (SPA friendly) */}
         <Route path="*" element={<Home />} />
