@@ -17,6 +17,7 @@ import CurrentIssue from "./pages/CurrentIssue";
 import Archives from "./pages/Archives";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import PublicationEthics from "./pages/authors/PublicationEthics";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -33,6 +34,9 @@ const AnimatedRoutes = () => {
         <Route path="/author-guidelines" element={<AuthorGuidlines />} />
         <Route path="/current-issue" element={<CurrentIssue />} />
         <Route path="/archives" element={<Archives />} />
+        <Route path="/publication-ethics" element={<PublicationEthics />} />
+
+      
         <Route path="/open-access-policy" element={<OpenAccessPolicy />} />
         <Route path="/contact" element={<Contact />} />
         {/* Fallback route - redirect unknown paths to Home content (SPA friendly) */}
