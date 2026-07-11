@@ -17,7 +17,7 @@ import {
   UsersRound,
 } from "lucide-react";
 
-import heroImg from "../assets/yashika-journal-home-hero-banner.webp";
+import heroImg from "../../assets/yashika-journal-home-hero-banner.webp";
 
 const waiverRows = [
   {
