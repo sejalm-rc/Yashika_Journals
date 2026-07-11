@@ -14,8 +14,8 @@ import {
   UsersRound,
 } from "lucide-react";
 
-import heroImg from "../assets/yashika-journal-home-hero-banner.webp";
-import ccByImg from "../assets/creative-commons-cc-by.webp";
+import heroImg from "../../assets/yashika-journal-home-hero-banner.webp";
+import ccByImg from "../../assets/crossref-doi-registration.webp";
 
 const benefits = [
   {
@@ -146,11 +146,11 @@ const staggerContainer = {
 function SectionHeading({ children }) {
   return (
     <div className="mb-4">
-      <h2 className="text-[18px] font-[600] text-[#063b87] sm:text-[21px]">
+      <h2 className="text-[16px] font-[600] uppercase tracking-[0.02em] text-[#075bc7] sm:text-[18px]">
         {children}
       </h2>
 
-      <div className="mt-2 h-[2px] w-[38px] bg-[#ff7200]" />
+      <div className="mt-2 h-[2px] w-[42px] rounded-full bg-[#ff7200]" />
     </div>
   );
 }
@@ -176,10 +176,10 @@ function HeroSection() {
               className="mb-6 flex flex-wrap items-center gap-2 text-[13px] font-semibold"
             >
               <a
-                href="/"
+                href="/about"
                 className="text-[#ff7600] transition hover:text-white"
               >
-                Home
+                About
               </a>
 
               <span className="text-white/80">›</span>
@@ -191,13 +191,13 @@ function HeroSection() {
               Open Access Policy
             </h1>
 
-            <div className="mt-5 h-[3px] w-[46px] rounded-full bg-[#ff7900]" />
+            <div className="mt-4 h-[3px] w-[46px] rounded-full bg-[#ff7900]" />
 
-            <p className="mt-6 text-[18px] font-medium text-white sm:text-[20px]">
+            <p className="mt-4 max-w-[400px] text-[14px] font-medium leading-[1.8] text-white sm:text-[14px] lg:text-[18px]">
               Yashika Publications
             </p>
 
-            <p className="mt-5 max-w-[490px] text-[14px] font-medium leading-[1.9] text-white/95">
+            <p className="mt-6 max-w-[500px] text-[14px] font-medium leading-[1.9] text-white/90 sm:text-[14px]">
               We are committed to the global dissemination of knowledge by
               providing immediate, free, and unrestricted access to high-quality
               research.
@@ -229,24 +229,24 @@ function CommitmentSection() {
           rotate: 5,
           scale: 1.06,
         }}
-        className="flex h-[90px] w-[90px] shrink-0 items-center justify-center self-center rounded-full bg-white text-[#ff7200] shadow-[0_6px_20px_rgba(8,66,145,0.14)] sm:self-auto"
+        className="flex h-[72px] w-[72px] shrink-0 items-center justify-center self-center rounded-full bg-white text-[#ff7200] shadow-[0_6px_20px_rgba(8,66,145,0.14)] sm:self-auto"
       >
-        <LockOpen className="h-[52px] w-[52px]" strokeWidth={1.8} />
+        <LockOpen className="h-[32px] w-[32px]" strokeWidth={1.8} />
       </motion.div>
 
       <div>
-        <h2 className="text-[17px] font-bold text-[#063b87]">
+        <h2 className="text-[18px] font-[600] text-[#063b87]">
           Our Commitment
         </h2>
 
-        <p className="mt-2 text-[12px] font-medium leading-[1.7] text-[#263b5c] sm:text-[13px]">
+        <p className="mt-2 text-[13px] font-medium leading-[1.7] text-[#263b5c] sm:text-[14px]">
           Yashika Publications is a strong advocate of Open Access (OA) and
           believes that research should be freely available to everyone for
           reading, downloading, sharing, and using, provided appropriate credit
           is given to the original author(s) and source.
         </p>
 
-        <p className="mt-3 text-[12px] font-bold text-[#063b87] sm:text-[13px]">
+        <p className="mt-3 text-[13px] font-[550] text-[#063b87] sm:text-[14px]">
           All our journals follow a Gold Open Access policy.
         </p>
       </div>
@@ -290,11 +290,11 @@ function BenefitsSection() {
                 <Icon className="h-[38px] w-[38px]" strokeWidth={1.6} />
               </motion.div>
 
-              <h3 className="mt-4 text-[12px] font-bold text-[#092b68]">
+              <h3 className="mt-4 text-[14px] font-[600] text-[#092b68]">
                 {item.title}
               </h3>
 
-              <p className="mt-4 text-[10px] font-medium leading-[1.75] text-[#344861] sm:text-[11px]">
+              <p className="mt-4 text-[13px] font-medium leading-[1.75] text-[#344861] sm:text-[11px]">
                 {item.description}
               </p>
             </motion.article>
@@ -316,7 +316,7 @@ function PolicyList({ items }) {
         >
           <span className="mt-[8px] h-[5px] w-[5px] shrink-0 rounded-full bg-[#ff7200]" />
 
-          <p className="text-[11px] font-medium leading-[1.65] text-[#263b5c] sm:text-[12px]">
+          <p className="text-[12px] font-medium leading-[1.65] text-[#263b5c] sm:text-[13px]">
             {item}
           </p>
         </motion.li>
@@ -335,7 +335,7 @@ function PolicySection() {
     >
       <SectionHeading>Our Open Access Policy</SectionHeading>
 
-      <p className="text-[11px] font-medium leading-[1.7] text-[#263b5c] sm:text-[12px]">
+      <p className="text-[12x] font-medium leading-[1.7] text-[#263b5c] sm:text-[13px]">
         Yashika Publications provides immediate and permanent open access to all
         articles published in our journals.
       </p>
@@ -375,7 +375,7 @@ function LicenseSection() {
         </motion.div>
 
         <div>
-          <p className="text-[11px] font-medium leading-[1.65] text-[#263b5c] sm:text-[12px]">
+          <p className="text-[12px] font-medium leading-[1.65] text-[#263b5c] sm:text-[13px]">
             All articles published by Yashika Publications are licensed under
             the{" "}
             <strong>
@@ -389,7 +389,7 @@ function LicenseSection() {
             <motion.div whileHover={{ x: 4 }} className="flex gap-2">
               <CheckCircle2 className="mt-[1px] h-[16px] w-[16px] shrink-0 text-[#0a9c55]" />
 
-              <p className="text-[11px] font-medium text-[#263b5c]">
+              <p className="text-[12px] font-medium text-[#263b5c] sm:text-[13px]">
                 <strong>Share</strong> — copy and redistribute the material in
                 any medium or format.
               </p>
@@ -398,20 +398,20 @@ function LicenseSection() {
             <motion.div whileHover={{ x: 4 }} className="flex gap-2">
               <CheckCircle2 className="mt-[1px] h-[16px] w-[16px] shrink-0 text-[#0a9c55]" />
 
-              <p className="text-[11px] font-medium text-[#263b5c]">
+              <p className="text-[12px] font-medium text-[#263b5c] sm:text-[13px]">
                 <strong>Adapt</strong> — remix, transform, and build upon the
                 material for any purpose, even commercially.
               </p>
             </motion.div>
           </div>
 
-          <p className="mt-3 text-[11px] font-medium leading-[1.6] text-[#263b5c]">
+          <p className="mt-3 text-[13px] font-medium leading-[1.6] text-[#263b5c]">
             as long as you give appropriate credit to the original author(s)
             and the source, provide a link to the license, and indicate if
             changes were made.
           </p>
 
-          <p className="mt-2 break-all text-[11px] font-bold text-[#063b87]">
+          <p className="mt-2 break-all text-[13px] font-[550] text-[#063b87]">
             License link:{" "}
             <a
               href="https://creativecommons.org/licenses/by/4.0/"
@@ -456,7 +456,7 @@ function ProcessSection() {
               <div className="relative flex w-full items-center justify-center">
                 <motion.div
                   whileHover={{ scale: 1.1 }}
-                  className="relative z-10 flex h-[34px] w-[34px] items-center justify-center rounded-full bg-[#07347d] text-[13px] font-bold text-white"
+                  className="relative z-10 flex h-[34px] w-[34px] items-center justify-center rounded-full bg-[#07347d] text-[13px] font-[550] text-white"
                 >
                   {step.number}
                 </motion.div>
@@ -476,11 +476,11 @@ function ProcessSection() {
                 <Icon className="h-[36px] w-[36px]" strokeWidth={1.6} />
               </motion.div>
 
-              <h3 className="mt-3 text-[12px] font-bold text-[#092b68]">
+              <h3 className="mt-3 text-[14px] font-[600] text-[#092b68]">
                 {step.title}
               </h3>
 
-              <p className="mt-2 text-[10px] font-medium leading-[1.55] text-[#344861]">
+              <p className="mt-2 text-[13px] font-medium leading-[1.55] text-[#344861]">
                 {step.description}
               </p>
             </motion.article>
@@ -506,11 +506,11 @@ function ContactStrip() {
     >
       <Mail className="h-[23px] w-[23px] shrink-0 text-[#075bc7]" />
 
-      <p className="text-[11px] font-medium leading-[1.7] text-[#263b5c] sm:text-[12px]">
+      <p className="text-[12px] font-medium leading-[1.7] text-[#263b5c] sm:text-[13px]">
         For any queries related to our Open Access policy, please contact us at:{" "}
         <a
           href="mailto:editor.aierrr@yashikapublications.com"
-          className="font-bold text-[#075bc7] hover:underline"
+          className="font-[550] text-[#075bc7] hover:underline"
         >
           editor.aierrr@yashikapublications.com
         </a>
