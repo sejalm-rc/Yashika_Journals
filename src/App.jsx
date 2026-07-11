@@ -11,7 +11,8 @@ import Journals from "./pages/Journals";
 import EditorialBoard from "./pages/EditorialBoard";
 import AuthorGuidlines from "./pages/authors/AuthorGuidelines";
 import ArticleProcessingCharges from "./pages/authors/ArticleProcessingCharges";
-import IndexingAbstracting from "./pages/IndexingAbstracting";
+import IndexingAbstracting from "./pages/about/IndexingAbstracting";
+import OpenAccessPolicy from "./pages/about/OpenAccessPolicy";
 import CurrentIssue from "./pages/CurrentIssue";
 import Archives from "./pages/Archives";
 import Contact from "./pages/Contact";
@@ -36,6 +37,7 @@ const AnimatedRoutes = () => {
         <Route path="/publication-ethics" element={<PublicationEthics />} />
 
       
+        <Route path="/open-access-policy" element={<OpenAccessPolicy />} />
         <Route path="/contact" element={<Contact />} />
         {/* Fallback route - redirect unknown paths to Home content (SPA friendly) */}
         <Route path="*" element={<Home />} />

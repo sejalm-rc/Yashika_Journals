@@ -17,6 +17,7 @@ const navItems = [
      
       { name: "Aims and Scope", path: "/aims-and-scope" },
       { name: "Indexing & Abstracting", path: "/indexing-and-abstracting" },
+      { name: "Open Access Policy", path: "/open-access-policy" },
     ],
   },
 

@@ -14,13 +14,13 @@ import {
   Star,
 } from "lucide-react";
 
-import heroImg from "../assets/yashika-journal-home-hero-banner.webp";
-import logo1 from "../assets/scopus-indexed-journal.webp";
-import logo2 from "../assets/crossref-doi-registration.webp";
-import logo3 from "../assets/doaj-indexed-journal.webp";
-import logo4 from "../assets/dimensions-indexed-journal.webp";
-import logo5 from "../assets/google-scholar-indexing.webp";
-import logo6 from "../assets/yashika-publication-publication-process.webp";
+import heroImg from "../../assets/yashika-journal-home-hero-banner.webp";
+import logo1 from "../../assets/scopus-indexed-journal.webp";
+import logo2 from "../../assets/crossref-doi-registration.webp";
+import logo3 from "../../assets/doaj-indexed-journal.webp";
+import logo4 from "../../assets/dimensions-indexed-journal.webp";
+import logo5 from "../../assets/google-scholar-indexing.webp";
+import logo6 from "../../assets/yashika-publication-publication-process.webp";
 
 /*
 Place logo images inside:
@@ -244,10 +244,10 @@ function HeroSection() {
               className="mb-6 flex flex-wrap items-center gap-2 text-[13px] font-semibold"
             >
               <a
-                href="/"
+                href="/about"
                 className="text-[#ff7600] transition hover:text-white"
               >
-                Home
+                About
               </a>
 
               <span className="text-white/80">›</span>
