@@ -18,7 +18,7 @@ const journalLinks = [
   
   { name: "About the Journal", path: "/about" },
   { name: " Editorial Board", path: "/editorial-board" },
-   { name: " Indexing & Abstracting", path: "/journals" },
+   { name: " Indexing & Abstracting", path: "/indexing-and-abstracting" },
   { name: " Current Issue", path: "/current-issue", },
   { name: " Archives", path: "/archives", },
  

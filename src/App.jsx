@@ -9,8 +9,8 @@ import About from "./pages/About";
 
 import Journals from "./pages/Journals";
 import EditorialBoard from "./pages/EditorialBoard";
-import AuthorGuidlines from "./pages/AuthorGuidelines";
-import ArticleProcessingCharges from "./pages/ArticleProcessingCharges";
+import AuthorGuidlines from "./pages/authors/AuthorGuidelines";
+import ArticleProcessingCharges from "./pages/authors/ArticleProcessingCharges";
 import IndexingAbstracting from "./pages/IndexingAbstracting";
 import CurrentIssue from "./pages/CurrentIssue";
 import Archives from "./pages/Archives";
