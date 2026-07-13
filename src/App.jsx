@@ -1,18 +1,16 @@
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
-
 import Journals from "./pages/Journals";
 import EditorialBoard from "./pages/EditorialBoard";
 import AuthorGuidlines from "./pages/authors/AuthorGuidelines";
 import ArticleProcessingCharges from "./pages/authors/ArticleProcessingCharges";
 import IndexingAbstracting from "./pages/about/IndexingAbstracting";
 import OpenAccessPolicy from "./pages/about/OpenAccessPolicy";
+import SubscriptionPolicy from "./pages/about/SubscriptionPolicy";
 import CurrentIssue from "./pages/CurrentIssue";
 import Archives from "./pages/Archives";
 import Contact from "./pages/Contact";
@@ -29,6 +27,7 @@ const AnimatedRoutes = () => {
         <Route path="/indexing-and-abstracting" element={<IndexingAbstracting />} />
         <Route path="/journals" element={<Journals />} />
         <Route path="/article-processing-charges" element={<ArticleProcessingCharges />} />
+        <Route path="/subscription-policy" element={<SubscriptionPolicy />} />
         <Route path="/editorial-board" element={<EditorialBoard />} />
         <Route path="/author-guidelines" element={<AuthorGuidlines />} />
         <Route path="/current-issue" element={<CurrentIssue />} />
