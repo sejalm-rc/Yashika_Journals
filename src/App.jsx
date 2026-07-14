@@ -6,16 +6,16 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Journals from "./pages/Journals";
 import EditorialBoard from "./pages/EditorialBoard";
-import AuthorGuidlines from "./pages/authors/AuthorGuidelines";
+import AuthorGuidlines from "./pages/FooterPages/AuthorGuidelines";
 import ArticleProcessingCharges from "./pages/authors/ArticleProcessingCharges";
 import IndexingAbstracting from "./pages/about/IndexingAbstracting";
-import OpenAccessPolicy from "./pages/about/OpenAccessPolicy";
+import OpenAccessPolicy from "./pages/FooterPages/OpenAccessPolicy";
 import SubscriptionPolicy from "./pages/about/SubscriptionPolicy";
 import CurrentIssue from "./pages/CurrentIssue";
 import Archives from "./pages/Archives";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
-import PublicationEthics from "./pages/authors/PublicationEthics";
+import PublicationEthics from "./pages/FooterPages/PublicationEthics";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
