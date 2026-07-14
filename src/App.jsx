@@ -16,6 +16,9 @@ import Archives from "./pages/Archives";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import PublicationEthics from "./pages/FooterPages/PublicationEthics";
+import SubmitManuscript from "./pages/FooterPages/SubmitManuscript";
+import CopyrightPolicy from "./pages/FooterPages/CopyrightPolicy";
+import PrivacyPolicy from "./pages/FooterPages/PrivacyPolicy"
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -34,9 +37,10 @@ const AnimatedRoutes = () => {
         <Route path="/current-issue" element={<CurrentIssue />} />
         <Route path="/archives" element={<Archives />} />
         <Route path="/publication-ethics" element={<PublicationEthics />} />
-
-      
+        <Route path="/submit-manuscript" element={<SubmitManuscript />} />
+        <Route path="/copyright-policy" element={<CopyrightPolicy />} />
         <Route path="/open-access-policy" element={<OpenAccessPolicy />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/contact" element={<Contact />} />
         {/* Fallback route - redirect unknown paths to Home content (SPA friendly) */}
         <Route path="*" element={<Home />} />
