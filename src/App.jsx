@@ -20,6 +20,7 @@ import SubmitManuscript from "./pages/FooterPages/SubmitManuscript";
 import CopyrightPolicy from "./pages/FooterPages/CopyrightPolicy";
 import PrivacyPolicy from "./pages/FooterPages/PrivacyPolicy";
 import TermsOfUse from "./pages/FooterPages/TermsOfUse";
+import ConflictOfInterest from "./pages/FooterPages/ConflictOfInterest";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -43,6 +44,7 @@ const AnimatedRoutes = () => {
         <Route path="/open-access-policy" element={<OpenAccessPolicy />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
+        <Route path="/conflict-of-interest" element={<ConflictOfInterest />} />
         
         <Route path="/contact" element={<Contact />} />
         {/* Fallback route - redirect unknown paths to Home content (SPA friendly) */}
