@@ -34,7 +34,6 @@ const authorLinks = [
     { name: "Peer Review Process", path: "/peer-review-process" },
     { name: "Copyright Policy", path: "/copyright-policy" },
     { name: "Article Processing Charges", path: "/article-processing-charges" },
-  
 ];
 
 const policyLinks = [

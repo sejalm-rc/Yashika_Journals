@@ -27,10 +27,9 @@ import {
   UserCheck,
   UserRoundCheck,
   Users,
-  Copyright
+  Copyright,
 } from "lucide-react";
 
-import logo from "../../assets/yashika-publication-logo.webp";
 import heroBg from "../../assets/yashika-journal-home-hero-banner.webp";
 
 /* -------------------------------------------------------------------------- */
@@ -330,28 +329,23 @@ export default function PrivacyPolicy() {
       {/* HERO                                                               */}
       {/* ================================================================== */}
 
-      <section className="relative min-h-[410px] overflow-hidden bg-[#071F58] sm:min-h-[440px] lg:min-h-[460px]">
+      <section className="relative min-h-[400px] overflow-hidden bg-[#071F58] sm:min-h-[430px] lg:min-h-[460px]">
         <div
-          className="absolute inset-0 bg-cover bg-[68%_center] bg-no-repeat sm:bg-center"
+          className="absolute inset-0 bg-cover bg-[70%_center] bg-no-repeat sm:bg-center"
           style={{
             backgroundImage: `url(${heroBg})`,
           }}
         />
 
+        {/* <div className="absolute inset-0 bg-[#061B46]/82 sm:bg-[#061B46]/72 lg:bg-gradient-to-r lg:from-[#061B46] lg:via-[#071F58]/88 lg:to-[#071F58]/35" /> */}
 
-        <div className="relative z-10 mx-auto flex min-h-[410px] max-w-[1260px] items-center px-4 py-12 sm:min-h-[440px] sm:px-6 lg:min-h-[460px] lg:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[400px] max-w-[1260px] items-center px-4 py-10 sm:min-h-[430px] sm:px-6 sm:py-12 lg:min-h-[460px] lg:px-10">
           <motion.div
             variants={stagger}
             initial="hidden"
             animate="show"
             className="w-full max-w-[700px] text-center sm:text-left"
           >
-            {/* <motion.img
-              variants={fadeUp}
-              src={logo}
-              alt="Yashika Publications"
-              className="mx-auto mb-6 h-9 w-auto object-contain sm:mx-0 sm:h-12"
-            /> */}
 
             <motion.div
               variants={fadeUp}
@@ -378,7 +372,7 @@ export default function PrivacyPolicy() {
 
             <motion.h1
               variants={fadeUp}
-              className="max-w-[400px] text-[34px] font-[600]  tracking-[-0.8px] text-white sm:text-[36px] md:text-[38px] lg:text-[40px]"
+              className="mx-auto mt-4 max-w-[440px] text-[30px] font-[600] leading-tight tracking-[-0.7px] text-white sm:mx-0 sm:text-[36px] md:text-[38px] lg:text-[40px]"
             >
               Privacy Policy
             </motion.h1>
@@ -404,7 +398,7 @@ export default function PrivacyPolicy() {
       {/* POLICY OVERVIEW                                                    */}
       {/* ================================================================== */}
 
-      <section className="relative py-8">
+      <section className="relative py-10 sm:py-12 lg:py-14">
         <div className="absolute left-0 top-0 h-72 w-72 rounded-full bg-blue-50 blur-3xl" />
         <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-orange-50 blur-3xl" />
 
@@ -523,7 +517,7 @@ export default function PrivacyPolicy() {
       {/* QUICK POLICY NAVIGATION                                            */}
       {/* ================================================================== */}
 
-      <section className="bg-[#F7F9FD] py-8">
+      <section className="bg-[#F7F9FD] py-10 sm:py-12 lg:py-14">
         <div className="mx-auto max-w-[1260px] px-4 sm:px-6 lg:px-10">
           <motion.div
             variants={stagger}
@@ -577,7 +571,7 @@ export default function PrivacyPolicy() {
 
       <section
         id="information-collected"
-        className="scroll-mt-24 py-8"
+        className="scroll-mt-24 py-10 sm:py-12 lg:py-14"
       >
         <div className="mx-auto max-w-[1260px] px-4 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
@@ -655,7 +649,7 @@ export default function PrivacyPolicy() {
 
       <section
         id="information-use"
-        className="scroll-mt-24 bg-[#F7F9FD] py-8"
+        className="scroll-mt-24 bg-[#F7F9FD] py-10 sm:py-12 lg:py-14"
       >
         <div className="mx-auto grid max-w-[1260px] gap-8 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:px-10">
           <motion.div
@@ -721,7 +715,7 @@ export default function PrivacyPolicy() {
 
       <section
         id="information-sharing"
-        className="scroll-mt-24 py-8"
+        className="scroll-mt-24 py-10 sm:py-12 lg:py-14"
       >
         <div className="mx-auto max-w-[1260px] px-4 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
@@ -730,7 +724,7 @@ export default function PrivacyPolicy() {
               Limited Disclosure
             </span>
 
-            <h2 className="mt-4 text-[20px] font-[600] leading-tight text-[#0B2C66] sm:text-[14px] lg:text-[28px]">
+            <h2 className="mt-4 text-[20px] font-[600] leading-tight text-[#0B2C66] sm:text-[24px] lg:text-[28px]">
               When Information May Be Shared
             </h2>
 
@@ -798,7 +792,7 @@ export default function PrivacyPolicy() {
             className="rounded-[26px] border border-slate-100 bg-white p-5 shadow-[0_14px_38px_rgba(15,54,110,.08)] sm:p-7"
           >
             <div className="flex items-start gap-4">
-              <div className="grid h-13 w-13 h-[52px] shrink-0 place-items-center rounded-2xl bg-[#125FEA] text-white">
+              <div className="grid h-[52px] w-[52px] shrink-0 place-items-center rounded-2xl bg-[#125FEA] text-white">
                 <Cookie size={25} />
               </div>
 
@@ -902,7 +896,7 @@ export default function PrivacyPolicy() {
                   className="group rounded-[22px] border border-slate-100 bg-white p-5 text-center shadow-[0_10px_28px_rgba(15,54,110,.07)] sm:p-6"
                 >
                   <div
-                    className={`mx-auto grid h-13 w-13 h-[52px] place-items-center rounded-full text-white transition duration-300 group-hover:rotate-6 group-hover:scale-110 ${
+                    className={`mx-auto grid h-[52px] w-[52px] shrink-0 place-items-center rounded-full text-white transition duration-300 group-hover:rotate-6 group-hover:scale-110 ${
                       index % 2 === 1 ? "bg-[#F57C20]" : "bg-[#125FEA]"
                     }`}
                   >
@@ -925,7 +919,7 @@ export default function PrivacyPolicy() {
 
       <section
         id="retention"
-        className="scroll-mt-24 bg-[#082D68] py-8 text-white"
+        className="scroll-mt-24 bg-[#082D68] py-10 text-white sm:py-12 lg:py-14"
       >
         <div className="mx-auto grid max-w-[1260px] gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:items-center lg:px-10">
           <motion.div
@@ -988,7 +982,7 @@ export default function PrivacyPolicy() {
 
       <section
         id="privacy-rights"
-        className="scroll-mt-24 py-8"
+        className="scroll-mt-24 py-10 sm:py-12 lg:py-14"
       >
         <div className="mx-auto max-w-[1260px] px-4 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
@@ -1025,7 +1019,7 @@ export default function PrivacyPolicy() {
                   y: -7,
                   boxShadow: "0 16px 36px rgba(15,54,110,.12)",
                 }}
-                className="flex items-start gap-4 rounded-[22px] border border-slate-100 bg-white p-5 shadow-[0_8px_24px_rgba(15,54,110,.07)]"
+                className="flex min-w-0 items-start gap-3 rounded-[22px] border border-slate-100 bg-white p-4 shadow-[0_8px_24px_rgba(15,54,110,.07)] sm:gap-4 sm:p-5"
               >
                 <div
                   className={`grid h-11 w-11 shrink-0 place-items-center rounded-2xl text-white ${
@@ -1080,7 +1074,7 @@ export default function PrivacyPolicy() {
       {/* CHILDREN AND POLICY UPDATES                                        */}
       {/* ================================================================== */}
 
-      <section className="bg-[#F7F9FD] py-8">
+      <section className="bg-[#F7F9FD] py-10 sm:py-12 lg:py-14">
         <div className="mx-auto grid max-w-[1260px] gap-6 px-4 sm:px-6 lg:grid-cols-2 lg:px-10">
           <motion.article
             variants={fadeLeft}
@@ -1137,69 +1131,6 @@ export default function PrivacyPolicy() {
       {/* CONTACT CTA                                                        */}
       {/* ================================================================== */}
 
-      {/* <section className="bg-white py-8">
-        <div className="mx-auto max-w-[1260px] px-4 sm:px-6 lg:px-10">
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -5 }}
-            className="relative overflow-hidden rounded-[26px] bg-gradient-to-r from-[#0D63E8] via-[#084AB9] to-[#071F58] p-6 text-white shadow-[0_25px_60px_rgba(7,45,115,.22)] sm:p-8 lg:p-10"
-          >
-            <div className="absolute inset-0 opacity-15 [background-image:linear-gradient(135deg,transparent_42%,#fff_43%,transparent_44%)] [background-size:80px_80px]" />
-
-            <motion.div
-              animate={{
-                x: [0, 16, 0],
-                rotate: [0, 4, 0],
-              }}
-              transition={{
-                duration: 7,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-              className="absolute -right-20 -top-24 h-72 w-72 rounded-full border border-blue-200/20"
-            />
-
-            <div className="relative flex flex-col items-center justify-between gap-7 text-center lg:flex-row lg:text-left">
-              <div className="flex max-w-3xl flex-col items-center gap-5 sm:flex-row sm:text-left">
-                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-white/20 bg-white/10 sm:h-16 sm:w-16">
-                  <ShieldCheck size={30} />
-                </div>
-
-                <div>
-                  <h2 className="text-[22px] font-[520] sm:text-[27px]">
-                    Have a Privacy Question?
-                  </h2>
-
-                  <p className="mt-2 max-w-2xl text-[13px] leading-6 text-blue-100/85 sm:text-[14px]">
-                    Contact the editorial office to request access, correction
-                    or clarification regarding your personal information.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-                <a
-                  href="mailto:info@yashikapublications.com"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[##ff7600] px-5 py-3 text-[12px] font-[600] text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#FF8D35] sm:w-auto"
-                >
-                  Email Privacy Enquiry
-                  <Mail size={17} />
-                </a>
-
-                <Link
-                  to="/contact"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/50 px-5 py-3 text-[12px] font-[600] text-white transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0B2C66] sm:w-auto"
-                >
-                  Contact Us
-                  <ArrowRight size={17} />
-                </Link>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section> */}
       <section className="bg-white py-8">
               <div className="mx-auto ">
                 <motion.div
@@ -1211,10 +1142,10 @@ export default function PrivacyPolicy() {
                 >
                   <div className="absolute inset-0 opacity-15 [background-image:linear-gradient(135deg,transparent_42%,#fff_43%,transparent_44%)] [background-size:80px_80px]" />
       
-                  <div className="relative flex flex-col items-center justify-between gap-7 text-center lg:flex-row lg:text-left max-w-[1260px] px-4 sm:px-6 lg:px-10">
-                    <div className="flex max-w-3xl flex-col items-center gap-5 sm:flex-row sm:text-left">
+                  <div className="relative mx-auto flex w-full max-w-[1260px] flex-col items-center justify-between gap-7 px-4 text-center sm:px-6 lg:flex-row lg:px-10 lg:text-left">
+                    <div className="flex max-w-3xl flex-col items-center gap-4 sm:flex-row sm:gap-5 sm:text-left">
                       <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-white/20 bg-white/10 sm:h-16 sm:w-16">
-                        <Copyright size={30} />
+                        <ShieldCheck size={30} />
                       </div>
       
                       <div>
