@@ -328,146 +328,61 @@ export default function PlagiarismPolicy() {
       {/* ================================================================== */}
 
       <section className="relative min-h-[400px] overflow-hidden bg-[#071F58] sm:min-h-[430px] lg:min-h-[460px]">
-              <div
-                className="absolute inset-0 bg-cover bg-[70%_center] bg-no-repeat sm:bg-center"
-                style={{
-                  backgroundImage: `url(${heroBg})`,
-                }}
-              />
-      
-              <div className="relative z-10 mx-auto flex min-h-[400px] max-w-[1260px] items-center px-4 py-10 sm:min-h-[430px] sm:px-6 sm:py-12 lg:min-h-[460px] lg:px-10">
-                <motion.div
-                  variants={stagger}
-                  initial="hidden"
-                  animate="show"
-                  className="w-full max-w-[700px] text-center sm:text-left"
-                >
-                  <motion.div
-                    variants={fadeUp}
-                    className="mb-5 flex flex-wrap items-center justify-center gap-2 text-[11px] font-[500] sm:justify-start sm:text-[13px]"
-                  >
-                    <Link
-                      to="/"
-                      className="text-white transition-colors duration-300 hover:text-[#ff7600]"
-                    >
-                      Home
-                    </Link>
-      
-                    <ChevronRight size={13} className="text-white/50" />
-      
-                    <span className="text-white">Plagirism Plicy</span>
-                  </motion.div>
-                  <motion.p
-                    variants={fadeUp}
-                    className="mt-5 text-[11px] font-[600] uppercase tracking-[0.18em] text-[#ff7600] sm:text-[13px] sm:tracking-[0.22em]"
-                  >
-                    Originality and Research Integrity
-                  </motion.p>
-      
-                  <motion.h1
-                    variants={fadeUp}
-                    className="mx-auto mt-4 max-w-[440px] text-[30px] font-[600] leading-tight tracking-[-0.7px] text-white sm:mx-0 sm:text-[36px] md:text-[38px] lg:text-[40px]"
-                  >
-                   Plagiarism Policy
-                  </motion.h1>
-      
-                  <motion.span
-                    variants={fadeUp}
-                    className="mx-auto mt-2 block h-1 w-14 rounded-full bg-[#ff7600] sm:mx-0"
-                  />
-      
-                  <motion.p
-                    variants={fadeUp}
-                    className="mx-auto mt-5 max-w-[650px] text-[14px] leading-7 text-white/85 sm:mx-0 sm:text-[16px]"
-                  >
-                    Protecting the originality, credibility and scholarly integrity
-              of manuscripts submitted to Yashika Publications.
-                  </motion.p>
-                </motion.div>
-              </div>
-            </section>
+        <div
+          className="absolute inset-0 bg-cover bg-[70%_center] bg-no-repeat sm:bg-center"
+          style={{
+            backgroundImage: `url(${heroBg})`,
+          }}
+        />
 
-      {/* ================================================================== */}
-      {/* POLICY STATEMENT                                                   */}
-      {/* ================================================================== */}
-
-      <section
-        id="policy-purpose"
-        className="scroll-mt-24 border-b border-slate-200 bg-white"
-      >
-        <div className="mx-auto grid max-w-[1320px] gap-5 px-4 py-6 sm:px-6 lg:grid-cols-[auto_1fr_auto] lg:items-center lg:px-10">
-          <div className="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-[#125FEA]">
-            <ShieldCheck size={23} />
-          </div>
-
-          <div className="min-w-0">
-            <h2 className="text-[16px] font-[600] text-[#0B2C66]">
-              Zero Tolerance for Deliberate Plagiarism
-            </h2>
-
-            <p className="mt-1 text-[12px] leading-6 text-slate-600">
-              Manuscripts containing deliberate copying, duplicate publication
-              or misappropriated research may be rejected or retracted.
-            </p>
-          </div>
-
-          <a
-            href="#screening-process"
-            onClick={(event) =>
-              scrollToSection(event, "#screening-process")
-            }
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#0B2C66] px-5 py-3 text-[12px] font-[600] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#125FEA] sm:w-auto"
-          >
-            View Screening Process
-            <ArrowRight size={16} />
-          </a>
-        </div>
-      </section>
-
-      {/* ================================================================== */}
-      {/* QUICK NAVIGATION                                                   */}
-      {/* ================================================================== */}
-
-      <section className="bg-[#F6F8FC] py-8 sm:py-10">
-        <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10">
+        <div className="relative z-10 mx-auto flex min-h-[400px] max-w-[1260px] items-center px-4 py-10 sm:min-h-[430px] sm:px-6 sm:py-12 lg:min-h-[460px] lg:px-10">
           <motion.div
             variants={stagger}
             initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.15 }}
-            className="grid overflow-hidden rounded-[18px] border border-slate-200 bg-white shadow-[0_10px_28px_rgba(15,54,110,.06)] sm:grid-cols-2 lg:grid-cols-4"
+            animate="show"
+            className="w-full max-w-[700px] text-center sm:text-left"
           >
-            {navigationItems.map((item, index) => (
-              <motion.a
-                key={item.href}
-                href={item.href}
-                onClick={(event) => scrollToSection(event, item.href)}
-                variants={fadeUp}
-                whileHover={{
-                  backgroundColor: "#F3F7FF",
-                }}
-                className={`group flex min-h-[82px] items-center gap-3 border-slate-200 p-4 transition ${
-                  index !== navigationItems.length - 1 ? "border-b" : ""
-                } ${index % 2 === 0 ? "sm:border-r" : ""} ${
-                  index < 6 ? "lg:border-b" : "lg:border-b-0"
-                } ${
-                  index % 4 !== 3 ? "lg:border-r" : "lg:border-r-0"
-                }`}
+            <motion.div
+              variants={fadeUp}
+              className="mb-5 flex flex-wrap items-center justify-center gap-2 text-[11px] font-[500] sm:justify-start sm:text-[13px]"
+            >
+              <Link
+                to="/"
+                className="text-white transition-colors duration-300 hover:text-[#ff7600]"
               >
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-blue-50 text-[10px] font-[700] text-[#125FEA] transition group-hover:bg-[#125FEA] group-hover:text-white">
-                  {item.number}
-                </span>
+                Home
+              </Link>
 
-                <span className="min-w-0 text-[12px] font-[600] leading-5 text-[#0B2C66]">
-                  {item.title}
-                </span>
+              <ChevronRight size={13} className="text-white/50" />
 
-                <ChevronRight
-                  size={15}
-                  className="ml-auto shrink-0 text-slate-400 transition-transform group-hover:translate-x-1 group-hover:text-[#125FEA]"
-                />
-              </motion.a>
-            ))}
+              <span className="text-white">Plagirism Plicy</span>
+            </motion.div>
+            <motion.p
+              variants={fadeUp}
+              className="mt-5 text-[11px] font-[600] uppercase tracking-[0.18em] text-[#ff7600] sm:text-[13px] sm:tracking-[0.22em]"
+            >
+              Originality and Research Integrity
+            </motion.p>
+
+            <motion.h1
+              variants={fadeUp}
+              className="mx-auto mt-4 max-w-[440px] text-[30px] font-[600] leading-tight tracking-[-0.7px] text-white sm:mx-0 sm:text-[36px] md:text-[38px] lg:text-[40px]"
+            >
+              Plagiarism Policy
+            </motion.h1>
+
+            <motion.span
+              variants={fadeUp}
+              className="mx-auto mt-2 block h-1 w-14 rounded-full bg-[#ff7600] sm:mx-0"
+            />
+
+            <motion.p
+              variants={fadeUp}
+              className="mx-auto mt-5 max-w-[650px] text-[14px] leading-7 text-white/85 sm:mx-0 sm:text-[16px]"
+            >
+              Protecting the originality, credibility and scholarly integrity of
+              manuscripts submitted to Yashika Publications.
+            </motion.p>
           </motion.div>
         </div>
       </section>
@@ -664,8 +579,8 @@ export default function PlagiarismPolicy() {
                   </h3>
 
                   <p className="mt-2 text-[12px] leading-6 text-slate-600">
-                    Submission confirms that the manuscript is original and
-                    that all borrowed material has been acknowledged.
+                    Submission confirms that the manuscript is original and that
+                    all borrowed material has been acknowledged.
                   </p>
                 </div>
               </div>
@@ -952,13 +867,7 @@ export default function PlagiarismPolicy() {
 /*                            VIOLATION CARD                                  */
 /* -------------------------------------------------------------------------- */
 
-function ViolationCard({
-  level,
-  title,
-  tone,
-  description,
-  actions,
-}) {
+function ViolationCard({ level, title, tone, description, actions }) {
   const styles = {
     blue: {
       header: "from-[#125FEA] to-[#082D68]",
@@ -1013,9 +922,7 @@ function ViolationCard({
                 <Check size={13} strokeWidth={3} />
               </span>
 
-              <p className="text-[12px] leading-6 text-slate-600">
-                {item}
-              </p>
+              <p className="text-[12px] leading-6 text-slate-600">{item}</p>
             </div>
           ))}
         </div>
@@ -1041,9 +948,7 @@ function PolicyPoint({ children, tone = "blue" }) {
         <Check size={13} strokeWidth={3} />
       </span>
 
-      <p className="min-w-0 text-[12px] leading-6 text-slate-600">
-        {children}
-      </p>
+      <p className="min-w-0 text-[12px] leading-6 text-slate-600">{children}</p>
     </div>
   );
 }
