@@ -15,6 +15,8 @@ import CurrentIssue from "./pages/CurrentIssue";
 import Archives from "./pages/Archives";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import PublicationEthics from "./pages/authors/PublicationEthics";
+import PeerReviewProcess from "./pages/authors/PeerReviewProcess";
 import PublicationEthics from "./pages/FooterPages/PublicationEthics";
 import SubmitManuscript from "./pages/FooterPages/SubmitManuscript";
 import CopyrightPolicy from "./pages/FooterPages/CopyrightPolicy";
@@ -39,6 +41,10 @@ const AnimatedRoutes = () => {
         <Route path="/author-guidelines" element={<AuthorGuidlines />} />
         <Route path="/current-issue" element={<CurrentIssue />} />
         <Route path="/archives" element={<Archives />} />
+        <Route path="/publication-ethics" element={<PublicationEthics />} /><Route
+  path="/peer-review-process"
+  element={<PeerReviewProcess />}
+/>
         <Route path="/publication-ethics" element={<PublicationEthics />} />
         <Route path="/submit-manuscript" element={<SubmitManuscript />} />
         <Route path="/copyright-policy" element={<CopyrightPolicy />} />
