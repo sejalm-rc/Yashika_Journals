@@ -861,55 +861,55 @@ export default function PlagiarismPolicy() {
       </section> */}
 
       <section className="bg-white py-8">
-              <div className="mx-auto ">
-                <motion.div
-                  initial={{ opacity: 0, y: 25 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
-                  className="relative overflow-hidden  bg-gradient-to-r from-[#0D63E8] via-[#084AB9] to-[#071F58] p-6 text-white shadow-[0_25px_60px_rgba(7,45,115,.22)] sm:p-8 lg:p-10"
-                >
-                  <div className="absolute inset-0 opacity-15 [background-image:linear-gradient(135deg,transparent_42%,#fff_43%,transparent_44%)] [background-size:80px_80px]" />
-      
-                  <div className="relative mx-auto flex w-full max-w-[1260px] flex-col items-center justify-between gap-7 px-4 text-center sm:px-6 lg:flex-row lg:px-10 lg:text-left">
-                    <div className="flex max-w-3xl flex-col items-center gap-4 sm:flex-row sm:gap-5 sm:text-left">
-                      <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-white/20 bg-white/10 sm:h-16 sm:w-16">
-                        <ShieldCheck size={30} />
-                      </div>
-      
-                      <div>
-                        <h2 className="text-[22px] font-[550] sm:text-[26px]">
-                          Have a Privacy Question?
-                        </h2>
-      
-                        <p className="mt-2 max-w-2xl text-[13px] leading-6 text-blue-100/85 sm:text-[14px]">
-                          Contact the editorial office to request access, correction
-                    or clarification regarding your personal information.
-                        </p>
-                      </div>
-                    </div>
-      
-                    <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-                      <a
-                        href="mailto:info@yashikapublications.com"
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#F57C20] px-4 py-3 text-[12px] font-[500] text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#FF8D35] sm:w-auto"
-                      >
-                        Email Privacy Enquiry
-                        <Mail size={17} />
-                      </a>
-      
-                      <Link
-                        to="/contact"
-                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/50 px-4 py-3 text-[12px] font-[500] text-white transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0B2C66] sm:w-auto"
-                      >
-                        Contact Us
-                        <ArrowRight size={17} />
-                      </Link>
-                    </div>
-                  </div>
-                </motion.div>
+        <div className="mx-auto ">
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -5 }}
+            className="relative overflow-hidden  bg-gradient-to-r from-[#0D63E8] via-[#084AB9] to-[#071F58] p-6 text-white shadow-[0_25px_60px_rgba(7,45,115,.22)] sm:p-8 lg:p-10"
+          >
+            <div className="absolute inset-0 opacity-15 [background-image:linear-gradient(135deg,transparent_42%,#fff_43%,transparent_44%)] [background-size:80px_80px]" />
+
+            <div className="relative mx-auto flex w-full max-w-[1260px] flex-col items-center justify-between gap-7 px-4 text-center sm:px-6 lg:flex-row lg:px-10 lg:text-left">
+              <div className="flex max-w-3xl flex-col items-center gap-4 sm:flex-row sm:gap-5 sm:text-left">
+                <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-white/20 bg-white/10 sm:h-16 sm:w-16">
+                  <ShieldCheck size={30} />
+                </div>
+
+                <div>
+                  <h2 className="text-[22px] font-[550] sm:text-[26px]">
+                    Report a Plagiarism Concern
+                  </h2>
+
+                  <p className="mt-2 max-w-2xl text-[13px] leading-6 text-blue-100/85 sm:text-[14px]">
+                    Send the article title, DOI or URL, copied material and
+                    supporting evidence to the editorial office.
+                  </p>
+                </div>
               </div>
-            </section>
+
+              <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+                <a
+                  href="mailto:info@yashikapublications.com"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#F57C20] px-4 py-3 text-[12px] font-[500] text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#FF8D35] sm:w-auto"
+                >
+                  Email Privacy Enquiry
+                  <Mail size={17} />
+                </a>
+
+                <Link
+                  to="/contact"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/50 px-4 py-3 text-[12px] font-[500] text-white transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0B2C66] sm:w-auto"
+                >
+                  Contact Us
+                  <ArrowRight size={17} />
+                </Link>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </motion.main>
   );
 }
