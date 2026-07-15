@@ -327,113 +327,65 @@ export default function PlagiarismPolicy() {
       {/* HERO                                                               */}
       {/* ================================================================== */}
 
-      <section className="relative overflow-hidden bg-[#061B46]">
-        <div
-          className="absolute inset-0 bg-cover bg-[68%_center] bg-no-repeat sm:bg-center"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-          }}
-        />
-
-        <div className="absolute inset-0 bg-[#061B46]/88 sm:bg-[#061B46]/80 lg:bg-gradient-to-r lg:from-[#061B46] lg:via-[#071F58]/94 lg:to-[#071F58]/52" />
-
-        <div className="absolute inset-0 opacity-10 [background-image:radial-gradient(circle_at_1px_1px,#ffffff_1px,transparent_0)] [background-size:24px_24px]" />
-
-        <motion.div
-          animate={{
-            y: [0, -14, 0],
-            rotate: [0, 5, 0],
-          }}
-          transition={{
-            duration: 7,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="absolute -right-20 -top-24 hidden h-[430px] w-[430px] rounded-full border border-white/10 lg:block"
-        />
-
-        <div className="relative mx-auto grid min-h-[430px] max-w-[1320px] items-center gap-10 px-4 py-12 sm:min-h-[450px] sm:px-6 lg:min-h-[470px] lg:grid-cols-[1fr_0.82fr] lg:px-10">
-          <motion.div
-            variants={fadeLeft}
-            initial="hidden"
-            animate="show"
-            className="relative z-10 text-center sm:text-left"
-          >
-            <div className="flex flex-wrap items-center justify-center gap-2 text-[12px] font-[500] text-white/75 sm:justify-start">
-              <Link
-                to="/"
-                className="transition-colors duration-300 hover:text-[#F57C20]"
-              >
-                Home
-              </Link>
-
-              <ChevronRight size={13} />
-
-              <span className="text-white">Plagiarism Policy</span>
-            </div>
-
-            <div className="mx-auto mt-7 grid h-14 w-14 place-items-center rounded-2xl border border-white/20 bg-white/10 text-white backdrop-blur-md sm:mx-0">
-              <ScanSearch size={27} />
-            </div>
-
-            <p className="mt-5 text-[11px] font-[600] uppercase tracking-[0.2em] text-[#FFA65C] sm:text-[13px]">
-              Originality and Research Integrity
-            </p>
-
-            <h1 className="mt-3 text-[31px] font-[600] leading-tight text-white sm:text-[39px] lg:text-[46px]">
-              Plagiarism Policy
-            </h1>
-
-            <span className="mx-auto mt-4 block h-1 w-14 rounded-full bg-[#F57C20] sm:mx-0" />
-
-            <p className="mx-auto mt-5 max-w-[680px] text-[14px] leading-7 text-white/82 sm:mx-0 sm:text-[16px]">
-              Protecting the originality, credibility and scholarly integrity
+      <section className="relative min-h-[400px] overflow-hidden bg-[#071F58] sm:min-h-[430px] lg:min-h-[460px]">
+              <div
+                className="absolute inset-0 bg-cover bg-[70%_center] bg-no-repeat sm:bg-center"
+                style={{
+                  backgroundImage: `url(${heroBg})`,
+                }}
+              />
+      
+              <div className="relative z-10 mx-auto flex min-h-[400px] max-w-[1260px] items-center px-4 py-10 sm:min-h-[430px] sm:px-6 sm:py-12 lg:min-h-[460px] lg:px-10">
+                <motion.div
+                  variants={stagger}
+                  initial="hidden"
+                  animate="show"
+                  className="w-full max-w-[700px] text-center sm:text-left"
+                >
+                  <motion.div
+                    variants={fadeUp}
+                    className="mb-5 flex flex-wrap items-center justify-center gap-2 text-[11px] font-[500] sm:justify-start sm:text-[13px]"
+                  >
+                    <Link
+                      to="/"
+                      className="text-white transition-colors duration-300 hover:text-[#ff7600]"
+                    >
+                      Home
+                    </Link>
+      
+                    <ChevronRight size={13} className="text-white/50" />
+      
+                    <span className="text-white">Plagirism Plicy</span>
+                  </motion.div>
+                  <motion.p
+                    variants={fadeUp}
+                    className="mt-5 text-[11px] font-[600] uppercase tracking-[0.18em] text-[#ff7600] sm:text-[13px] sm:tracking-[0.22em]"
+                  >
+                    Originality and Research Integrity
+                  </motion.p>
+      
+                  <motion.h1
+                    variants={fadeUp}
+                    className="mx-auto mt-4 max-w-[440px] text-[30px] font-[600] leading-tight tracking-[-0.7px] text-white sm:mx-0 sm:text-[36px] md:text-[38px] lg:text-[40px]"
+                  >
+                   Plagiarism Policy
+                  </motion.h1>
+      
+                  <motion.span
+                    variants={fadeUp}
+                    className="mx-auto mt-2 block h-1 w-14 rounded-full bg-[#ff7600] sm:mx-0"
+                  />
+      
+                  <motion.p
+                    variants={fadeUp}
+                    className="mx-auto mt-5 max-w-[650px] text-[14px] leading-7 text-white/85 sm:mx-0 sm:text-[16px]"
+                  >
+                    Protecting the originality, credibility and scholarly integrity
               of manuscripts submitted to Yashika Publications.
-            </p>
-          </motion.div>
-
-          <motion.div
-            variants={fadeRight}
-            initial="hidden"
-            animate="show"
-            className="hidden lg:block"
-          >
-            <div className="relative ml-auto max-w-[430px] overflow-hidden rounded-[28px] border border-white/15 bg-white/[0.08] p-7 text-white backdrop-blur-xl">
-              <div className="absolute right-0 top-0 h-32 w-32 rounded-bl-full bg-[#F57C20]/15" />
-
-              <div className="relative">
-                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-[#F57C20] text-white shadow-lg">
-                  <ShieldCheck size={27} />
-                </div>
-
-                <p className="mt-6 text-[11px] font-[600] uppercase tracking-[0.16em] text-blue-200">
-                  Editorial Standard
-                </p>
-
-                <h2 className="mt-2 text-[24px] font-[600]">
-                  Original Work Is Essential
-                </h2>
-
-                <p className="mt-4 text-[13px] leading-7 text-blue-100/80">
-                  Every manuscript must represent genuine scholarly work and
-                  properly acknowledge all sources, ideas, data and previously
-                  published material.
-                </p>
-
-                <div className="mt-6 border-t border-white/10 pt-5">
-                  <div className="flex items-center gap-3">
-                    <BadgeCheck size={19} className="text-[#FFA65C]" />
-
-                    <p className="text-[12px] text-white/85">
-                      Similarity does not automatically equal plagiarism.
-                    </p>
-                  </div>
-                </div>
+                  </motion.p>
+                </motion.div>
               </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+            </section>
 
       {/* ================================================================== */}
       {/* POLICY STATEMENT                                                   */}
