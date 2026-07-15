@@ -21,6 +21,7 @@ import CopyrightPolicy from "./pages/FooterPages/CopyrightPolicy";
 import PrivacyPolicy from "./pages/FooterPages/PrivacyPolicy";
 import TermsOfUse from "./pages/FooterPages/TermsOfUse";
 import ConflictOfInterest from "./pages/FooterPages/ConflictOfInterest";
+import PlagiarismPolicy from "./pages/FooterPages/PlagiarismPolicy";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -45,6 +46,7 @@ const AnimatedRoutes = () => {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-of-use" element={<TermsOfUse />} />
         <Route path="/conflict-of-interest" element={<ConflictOfInterest />} />
+        <Route path="/plagiarism-policy" element={<PlagiarismPolicy />} />
         
         <Route path="/contact" element={<Contact />} />
         {/* Fallback route - redirect unknown paths to Home content (SPA friendly) */}
