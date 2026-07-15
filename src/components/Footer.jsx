@@ -28,22 +28,20 @@ const journalLinks = [
 ];
 
 const authorLinks = [
-  "Author Guidelines",
-"Submit Manuscript",
-"Publication Ethics",
-"Peer Review Process",
-  "Copyright Policy",
- "Article Processing Charges",
-  
+    { name: "Author Guidelines", path: "/author-guidelines" },
+    { name: "Submit Manuscript", path: "/submit-manuscript" },
+    { name: "Publication Ethics", path: "/publication-ethics" },
+    { name: "Peer Review Process", path: "/peer-review-process" },
+    { name: "Copyright Policy", path: "/copyright-policy" },
+    { name: "Article Processing Charges", path: "/article-processing-charges" },
 ];
 
 const policyLinks = [
-"Privacy Policy",
-"Terms of Use",
-"Open Access Policy",
-"Conflict of Interest",
-"Plagiarism Policy",
- 
+    { name: "Privacy Policy", path: "/privacy-policy" },
+    { name: "Terms of Use", path: "/terms-of-use" },
+    { name: "Open Access Policy", path: "/open-access-policy" },
+    { name: "Conflict of Interest", path: "/conflict-of-interest" },
+    { name: "Plagiarism Policy", path: "/plagiarism-policy" },
 ];
 
 const socials = [

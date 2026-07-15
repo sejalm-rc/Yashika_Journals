@@ -8,7 +8,6 @@ import logo from "../assets/yashika-publication-logo.webp";
 
 const navItems = [
   { name: "Home", path: "/" },
-
   {
     name: "About",
     path: "/about",
@@ -18,6 +17,7 @@ const navItems = [
       { name: "Aims and Scope", path: "/aims-and-scope" },
       { name: "Indexing & Abstracting", path: "/indexing-and-abstracting" },
       { name: "Open Access Policy", path: "/open-access-policy" },
+      { name: "Subscription Policy", path: "/subscription-policy" },
     ],
   },
 
