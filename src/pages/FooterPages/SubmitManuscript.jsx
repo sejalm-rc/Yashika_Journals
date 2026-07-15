@@ -253,7 +253,7 @@ export default function SubmitYourPaper() {
               }}
               className="relative z-10 max-w-[600px] py-14 lg:py-10"
             >
-              <div className="mb-7 flex flex-wrap items-center gap-2 text-[13px] font-[500]">
+              <div className="mb-7 flex flex-wrap items-center gap-2 text-[14px] font-[500]">
                 <Link
                   to="/"
                   className="text-[#ff7800] transition-colors duration-300 hover:text-white"
@@ -261,8 +261,9 @@ export default function SubmitYourPaper() {
                   Home
                 </Link>
 
-                <ChevronRight className="text-[8px] text-white/70" />
-
+                <span className="text-white/80">›</span>
+                 <span className="text-white">Open Access Policy</span>
+               <span className="text-white/80">›</span>
                 <span className="text-white"> Submit Manuscript</span>
               </div>
 

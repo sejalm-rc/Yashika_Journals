@@ -125,8 +125,7 @@ const internationalStandards = [
   {
     icon: BookOpen,
     title: "COPE Guidelines",
-    description:
-      "Promoting integrity in research and its publication.",
+    description: "Promoting integrity in research and its publication.",
   },
   {
     icon: BadgeCheck,
@@ -198,86 +197,86 @@ const PublicationEthics = () => {
     <PageTransition>
       <main className="overflow-hidden bg-white">
         {/* Hero */}
-          <section className="relative overflow-hidden ">
-                          <div
-                            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-                            style={{
-                              backgroundImage: `url(${heroBg})`,
-                            }}
-                          />
-                
-                          
-                          <div className="relative mx-auto min-h-[500px] max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
-                            <div className="grid min-h-[500px] items-center gap-8 lg:grid-cols-[1fr_0.9fr]">
-                              {/* Hero content */}
-                              <motion.div
-                                variants={fadeUp}
-                                initial="hidden"
-                                animate="visible"
-                                transition={{
-                                  duration: 0.65,
-                                  ease: "easeOut",
-                                }}
-                                className="relative z-10 max-w-[600px] py-14 lg:py-10"
-                              >
-                                <div className="mb-7 flex flex-wrap items-center gap-2 text-[13px] font-[500]">
-                                  <Link
-                                    to="/"
-                                    className="text-[#ff7800] transition-colors duration-300 hover:text-white"
-                                  >
-                                    Home
-                                  </Link>
-                
-                                  <FaChevronRight className="text-[8px] text-white/70" />
-                
-                                  <span className="text-white">    Publication Ethics</span>
-                                </div>
-                
-                                <h1 className="text-[36px] font-[600] leading-[1.1] tracking-[-1px] text-white sm:text-[40px] lg:text-[42px]">
-                                    Publication Ethics
-                                </h1>
-                
-                                <div className="mt-3 h-[3px] w-[42px] bg-[#ff6b00] rounded-full" />
-                
-                                <p className="mt-6 max-w-[520px] text-[17px] font-[400] leading-[1.55] text-white sm:text-[17px]">
-                                  Artificial Intelligence Education Research
-                                  <br className="hidden sm:block" />
-                                  and Review (AIERRR)
-                                </p>
-                                  <p className="mt-5 max-w-[430px] text-[12px] leading-[1.8] text-white/80 sm:text-[13px]">
-                        AIERRR follows the highest standards of publication ethics
-                  and adheres to internationally recognized guidelines to ensure
+        <section className="relative overflow-hidden ">
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: `url(${heroBg})`,
+            }}
+          />
+
+          <div className="relative mx-auto min-h-[500px] max-w-[1440px] px-5 sm:px-8 lg:px-12 xl:px-16">
+            <div className="grid min-h-[500px] items-center gap-8 lg:grid-cols-[1fr_0.9fr]">
+              {/* Hero content */}
+              <motion.div
+                variants={fadeUp}
+                initial="hidden"
+                animate="visible"
+                transition={{
+                  duration: 0.65,
+                  ease: "easeOut",
+                }}
+                className="relative z-10 max-w-[600px] py-14 lg:py-10"
+              >
+                <div className="mb-7 flex flex-wrap items-center gap-2 text-[13px] font-[500]">
+                  <Link
+                    to="/"
+                    className="text-[#ff7800] transition-colors duration-300 hover:text-white"
+                  >
+                    Home
+                  </Link>
+                  <FaChevronRight className="text-[8px] text-white/70" />
+                  <Link to="/author-guidelines" className="text-white">
+                    For Authors
+                  </Link>
+
+                  <FaChevronRight className="text-[8px] text-white/70" />
+
+                  <span className="text-white"> Publication Ethics</span>
+                </div>
+
+                <h1 className="text-[36px] font-[600] leading-[1.1] tracking-[-1px] text-white sm:text-[40px] lg:text-[42px]">
+                  Publication Ethics
+                </h1>
+
+                <div className="mt-3 h-[3px] w-[42px] bg-[#ff6b00] rounded-full" />
+
+                <p className="mt-6 max-w-[520px] text-[17px] font-[400] leading-[1.55] text-white sm:text-[17px]">
+                  Artificial Intelligence Education Research
+                  <br className="hidden sm:block" />
+                  and Review (AIERRR)
+                </p>
+                <p className="mt-5 max-w-[430px] text-[12px] leading-[1.8] text-white/80 sm:text-[13px]">
+                  AIERRR follows the highest standards of publication ethics and
+                  adheres to internationally recognized guidelines to ensure
                   integrity, transparency, and accountability in scholarly
                   publishing.
-                        </p>
-                              </motion.div>
-                
-                              {/* Journal book */}
-                              <motion.div
-                                initial={{
-                                  opacity: 0,
-                                  x: 70,
-                                  rotateY: -12,
-                                }}
-                                animate={{
-                                  opacity: 1,
-                                  x: 0,
-                                  rotateY: 0,
-                                }}
-                                transition={{
-                                  duration: 0.85,
-                                  ease: "easeOut",
-                                }}
-                                className="relative hidden h-full items-end justify-center lg:flex"
-                              >
-                              
-                
-                                <div className="absolute bottom-[9px] h-7 w-[250px] rounded-full bg-black/35 blur-xl" />
-                              </motion.div>
-                            </div>
-                          </div>
-                        </section>
-      
+                </p>
+              </motion.div>
+
+              {/* Journal book */}
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  x: 70,
+                  rotateY: -12,
+                }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  rotateY: 0,
+                }}
+                transition={{
+                  duration: 0.85,
+                  ease: "easeOut",
+                }}
+                className="relative hidden h-full items-end justify-center lg:flex"
+              >
+                <div className="absolute bottom-[9px] h-7 w-[250px] rounded-full bg-black/35 blur-xl" />
+              </motion.div>
+            </div>
+          </div>
+        </section>
 
         {/* Commitment and standards */}
         <section className="px-5 pb-8 pt-10 sm:px-8 lg:px-12 xl:px-16">
