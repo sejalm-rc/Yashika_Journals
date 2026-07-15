@@ -355,7 +355,7 @@ export default function PlagiarismPolicy() {
 
               <ChevronRight size={13} className="text-white/50" />
 
-              <span className="text-white">Plagirism Plicy</span>
+              <span className="text-white">Plagirism Policy</span>
             </motion.div>
             <motion.p
               variants={fadeUp}
