@@ -397,12 +397,12 @@ export default function PlagiarismPolicy() {
       >
         <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-[11px] font-[600] uppercase tracking-[0.16em] text-[#125FEA] sm:text-[12px]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-[11px] font-[500] uppercase tracking-[0.16em] text-[#125FEA] sm:text-[12px]">
               <CopyCheck size={14} />
               Forms of Misconduct
             </span>
 
-            <h2 className="mt-4 text-[24px] font-[600] leading-tight text-[#0B2C66] sm:text-[28px] lg:text-[32px]">
+            <h2 className="mt-4 text-[20px] font-[600] leading-tight text-[#0B2C66] sm:text-[24px] lg:text-[28px]">
               What Constitutes Plagiarism?
             </h2>
 
@@ -433,7 +433,7 @@ export default function PlagiarismPolicy() {
                   }}
                   className="group relative overflow-hidden rounded-[22px] border border-slate-100 bg-white p-5 shadow-[0_8px_24px_rgba(15,54,110,.06)] sm:p-6"
                 >
-                  <span className="absolute right-4 top-2 text-[48px] font-[800] text-blue-50">
+                  <span className="absolute right-4 top-2 text-[24px] font-[500] text-blue-50">
                     {number}
                   </span>
 
@@ -445,7 +445,7 @@ export default function PlagiarismPolicy() {
                     <Icon size={23} />
                   </div>
 
-                  <h3 className="relative z-10 mt-5 text-[15px] font-[600] text-[#0B2C66]">
+                  <h3 className="relative z-10 mt-5 text-[15px] font-[550] text-[#0B2C66]">
                     {title}
                   </h3>
 
@@ -469,16 +469,16 @@ export default function PlagiarismPolicy() {
       >
         <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-[600] uppercase tracking-[0.16em] text-blue-100 sm:text-[12px]">
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-[500] uppercase tracking-[0.16em] text-blue-100 sm:text-[12px]">
               <ScanSearch size={14} />
               Editorial Screening
             </span>
 
-            <h2 className="mt-4 text-[24px] font-[600] sm:text-[28px] lg:text-[32px]">
+            <h2 className="mt-4 text-[240px] font-[600] sm:text-[24px] lg:text-[28px]">
               Plagiarism Screening Process
             </h2>
 
-            <span className="mx-auto mt-3 block h-1 w-14 rounded-full bg-[#F57C20]" />
+            <span className="mx-auto mt-2 block h-1 w-14 rounded-full bg-[#F57C20]" />
 
             <p className="mx-auto mt-5 max-w-2xl text-[13px] leading-7 text-blue-100/80 sm:text-[14px]">
               Similarity reports are interpreted by editors. Decisions are not
@@ -515,11 +515,11 @@ export default function PlagiarismPolicy() {
                       <Icon size={22} />
                     </div>
 
-                    <span className="text-[10px] font-[700] uppercase tracking-[0.16em] text-[#FFA65C]">
+                    <span className="text-[10px] font-[500] uppercase tracking-[0.16em] text-[#FFA65C]">
                       Stage {number}
                     </span>
 
-                    <h3 className="mt-3 text-[14px] font-[600] text-white">
+                    <h3 className="mt-3 text-[14px] font-[550] text-white">
                       {title}
                     </h3>
 
@@ -550,16 +550,16 @@ export default function PlagiarismPolicy() {
             viewport={{ once: true }}
             className="lg:sticky lg:top-8"
           >
-            <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-[11px] font-[600] uppercase tracking-[0.16em] text-[#125FEA] sm:text-[12px]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-4 py-2 text-[11px] font-[500] uppercase tracking-[0.16em] text-[#125FEA] sm:text-[12px]">
               <UserCheck size={14} />
               Before Submission
             </span>
 
-            <h2 className="mt-4 text-[24px] font-[600] leading-tight text-[#0B2C66] sm:text-[28px] lg:text-[31px]">
+            <h2 className="mt-4 text-[20px] font-[600] leading-tight text-[#0B2C66] sm:text-[24px] lg:text-[28px]">
               Author Responsibilities
             </h2>
 
-            <span className="mt-3 block h-1 w-14 rounded-full bg-[#F57C20]" />
+            <span className="mt-2 block h-1 w-14 rounded-full bg-[#F57C20]" />
 
             <p className="mt-5 text-[13px] leading-7 text-slate-600 sm:text-[14px]">
               Authors must ensure that the manuscript is original, correctly
@@ -574,7 +574,7 @@ export default function PlagiarismPolicy() {
                 />
 
                 <div className="min-w-0">
-                  <h3 className="text-[14px] font-[600] text-[#0B2C66]">
+                  <h3 className="text-[14px] font-[550] text-[#0B2C66]">
                     Author Declaration
                   </h3>
 
@@ -631,16 +631,16 @@ export default function PlagiarismPolicy() {
       >
         <div className="mx-auto max-w-[1320px] px-4 sm:px-6 lg:px-10">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-[11px] font-[600] uppercase tracking-[0.16em] text-[#125FEA] shadow-sm sm:text-[12px]">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-[11px] font-[500] uppercase tracking-[0.16em] text-[#125FEA] shadow-sm sm:text-[12px]">
               <AlertTriangle size={14} />
               Editorial Assessment
             </span>
 
-            <h2 className="mt-4 text-[24px] font-[600] leading-tight text-[#0B2C66] sm:text-[28px] lg:text-[32px]">
+            <h2 className="mt-4 text-[20px] font-[600] leading-tight text-[#0B2C66] sm:text-[24px] lg:text-[28px]">
               Levels of Plagiarism Concern
             </h2>
 
-            <span className="mx-auto mt-3 block h-1 w-14 rounded-full bg-[#F57C20]" />
+            <span className="mx-auto mt-2 block h-1 w-14 rounded-full bg-[#F57C20]" />
 
             <p className="mx-auto mt-5 max-w-2xl text-[13px] leading-7 text-slate-600 sm:text-[14px]">
               Editorial action depends on the extent, context, intent and
@@ -679,7 +679,7 @@ export default function PlagiarismPolicy() {
                   <Check size={23} strokeWidth={3} />
                 </div>
 
-                <h2 className="mt-4 text-[21px] font-[600] sm:text-[24px]">
+                <h2 className="mt-4 text-[21px] font-[550] sm:text-[24px]">
                   Acceptable Similarity
                 </h2>
 
@@ -712,7 +712,7 @@ export default function PlagiarismPolicy() {
                   <Ban size={23} />
                 </div>
 
-                <h2 className="mt-4 text-[21px] font-[600] sm:text-[24px]">
+                <h2 className="mt-4 text-[21px] font-[550] sm:text-[24px]">
                   Unacceptable Practices
                 </h2>
 
@@ -754,7 +754,7 @@ export default function PlagiarismPolicy() {
               Plagiarism Identified After Publication
             </h2>
 
-            <span className="mx-auto mt-3 block h-1 w-14 rounded-full bg-[#F57C20]" />
+            <span className="mx-auto mt-2 block h-1 w-14 rounded-full bg-[#F57C20]" />
 
             <p className="mx-auto mt-5 max-w-2xl text-[13px] leading-7 text-blue-100/80 sm:text-[14px]">
               Confirmed concerns may require correction, withdrawal, retraction
@@ -788,7 +788,7 @@ export default function PlagiarismPolicy() {
                     <Icon size={22} />
                   </div>
 
-                  <h3 className="mt-5 text-[15px] font-[600] text-white">
+                  <h3 className="mt-5 text-[15px] font-[550] text-white">
                     {title}
                   </h3>
 
@@ -806,7 +806,7 @@ export default function PlagiarismPolicy() {
       {/* REPORT CONCERN                                                     */}
       {/* ================================================================== */}
 
-      <section
+      {/* <section
         id="report-concern"
         className="scroll-mt-24 bg-white py-10 sm:py-12"
       >
@@ -827,7 +827,7 @@ export default function PlagiarismPolicy() {
                 </div>
 
                 <div className="min-w-0">
-                  <h2 className="text-[22px] font-[600] sm:text-[26px]">
+                  <h2 className="text-[22px] font-[550] sm:text-[24px]">
                     Report a Plagiarism Concern
                   </h2>
 
@@ -841,7 +841,7 @@ export default function PlagiarismPolicy() {
               <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
                 <a
                   href="mailto:info@yashikapublications.com"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#F57C20] px-5 py-3 text-[12px] font-[600] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#FF8D35] sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#F57C20] px-4 py-3 text-[12px] font-[500] text-white transition duration-300 hover:-translate-y-1 hover:bg-[#FF8D35] sm:w-auto"
                 >
                   Email Editorial Office
                   <Mail size={17} />
@@ -849,7 +849,7 @@ export default function PlagiarismPolicy() {
 
                 <Link
                   to="/contact"
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/50 px-5 py-3 text-[12px] font-[600] text-white transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0B2C66] sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/50 px-4 py-3 text-[12px] font-[500] text-white transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0B2C66] sm:w-auto"
                 >
                   Contact Us
                   <ArrowRight size={17} />
@@ -858,7 +858,58 @@ export default function PlagiarismPolicy() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
+
+      <section className="bg-white py-8">
+              <div className="mx-auto ">
+                <motion.div
+                  initial={{ opacity: 0, y: 25 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  whileHover={{ y: -5 }}
+                  className="relative overflow-hidden  bg-gradient-to-r from-[#0D63E8] via-[#084AB9] to-[#071F58] p-6 text-white shadow-[0_25px_60px_rgba(7,45,115,.22)] sm:p-8 lg:p-10"
+                >
+                  <div className="absolute inset-0 opacity-15 [background-image:linear-gradient(135deg,transparent_42%,#fff_43%,transparent_44%)] [background-size:80px_80px]" />
+      
+                  <div className="relative mx-auto flex w-full max-w-[1260px] flex-col items-center justify-between gap-7 px-4 text-center sm:px-6 lg:flex-row lg:px-10 lg:text-left">
+                    <div className="flex max-w-3xl flex-col items-center gap-4 sm:flex-row sm:gap-5 sm:text-left">
+                      <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl border border-white/20 bg-white/10 sm:h-16 sm:w-16">
+                        <ShieldCheck size={30} />
+                      </div>
+      
+                      <div>
+                        <h2 className="text-[22px] font-[550] sm:text-[26px]">
+                          Have a Privacy Question?
+                        </h2>
+      
+                        <p className="mt-2 max-w-2xl text-[13px] leading-6 text-blue-100/85 sm:text-[14px]">
+                          Contact the editorial office to request access, correction
+                    or clarification regarding your personal information.
+                        </p>
+                      </div>
+                    </div>
+      
+                    <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
+                      <a
+                        href="mailto:info@yashikapublications.com"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#F57C20] px-4 py-3 text-[12px] font-[500] text-white shadow-lg transition duration-300 hover:-translate-y-1 hover:bg-[#FF8D35] sm:w-auto"
+                      >
+                        Email Privacy Enquiry
+                        <Mail size={17} />
+                      </a>
+      
+                      <Link
+                        to="/contact"
+                        className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-white/50 px-4 py-3 text-[12px] font-[500] text-white transition duration-300 hover:-translate-y-1 hover:bg-white hover:text-[#0B2C66] sm:w-auto"
+                      >
+                        Contact Us
+                        <ArrowRight size={17} />
+                      </Link>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </section>
     </motion.main>
   );
 }
@@ -897,11 +948,11 @@ function ViolationCard({ level, title, tone, description, actions }) {
       className="overflow-hidden rounded-[24px] border border-slate-100 bg-white shadow-[0_10px_28px_rgba(15,54,110,.07)]"
     >
       <div className={`bg-gradient-to-r ${current.header} p-6 text-white`}>
-        <p className="text-[10px] font-[700] uppercase tracking-[0.18em] text-white/70">
+        <p className="text-[10px] font-[550] uppercase tracking-[0.18em] text-white/70">
           {level}
         </p>
 
-        <h3 className="mt-2 text-[21px] font-[600]">{title}</h3>
+        <h3 className="mt-2 text-[21px] font-[550]">{title}</h3>
 
         <p className="mt-3 text-[12px] leading-6 text-white/80">
           {description}
@@ -909,7 +960,7 @@ function ViolationCard({ level, title, tone, description, actions }) {
       </div>
 
       <div className="p-5 sm:p-6">
-        <p className="text-[10px] font-[700] uppercase tracking-[0.16em] text-slate-400">
+        <p className="text-[10px] font-[550] uppercase tracking-[0.16em] text-slate-400">
           Possible Actions
         </p>
 
