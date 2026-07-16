@@ -177,7 +177,7 @@ function HeroSection() {
             >
               <a
                 href="/about"
-                className="text-[#ff7600] transition hover:text-white"
+                className="text-white transition hover:text-[#ff7600]"
               >
                 About
               </a>
