@@ -23,8 +23,9 @@ import {
   ShieldCheck,
   Type,
 } from "lucide-react";
-
+import { Link } from "react-router-dom";
 import heroImg from "../../assets/yashika-journal-home-hero-banner.webp";
+import { FaChevronRight } from "react-icons/fa";
 
 const quickLinks = [
   {
@@ -280,29 +281,18 @@ function HeroSection() {
             animate="visible"
             className="max-w-[520px]"
           >
-            <motion.div
-              whileHover={{
-                x: 4,
-              }}
-              className="mb-6 flex flex-wrap items-center gap-2 text-[13px] font-semibold"
-            >
-              <a href="/" className="text-[#ff7600] hover:text-white">
-                Home
-              </a>
+          <div className="mb-7 flex flex-wrap items-center gap-2 text-[13px] font-[500]">
+                  <Link
+                    to="/"
+                    className="text-[#ff7800] transition-colors duration-300 hover:text-white"
+                  >
+                    Home
+                  </Link>
 
-              <span className="text-white/80">›</span>
+                  <FaChevronRight className="text-[8px] text-white/70" />
 
-              <a
-                href="/authors"
-                className="text-white transition hover:text-[#ff7600]"
-              >
-                For Authors
-              </a>
-
-              <span className="text-white/80">›</span>
-
-              <span className="text-white">Author Guidelines</span>
-            </motion.div>
+                  <span className="text-white">About the Journal</span>
+                </div>
 
             <h1 className="max-w-[400px] text-[34px] font-[600]  tracking-[-0.8px] text-white sm:text-[36px] md:text-[38px] lg:text-[40px]">
               Author Guidelines
