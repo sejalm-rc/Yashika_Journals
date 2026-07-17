@@ -47,7 +47,7 @@ import CrossrefXmlExport from "./pages/admin/CrossrefXmlExport";
 
 const hideLayoutRoutes = [
   "/login",
-  "/author-guidelines",
+ 
   "/open-access-policy",
   "/publication-ethics",
   "/peer-review-process",
