@@ -11,30 +11,30 @@ const navItems = [
   {
     name: "About",
     path: "/about",
-    dropdown: [
-      { name: "About the Journal", path: "/about" },
+    // dropdown: [
+    //   { name: "About the Journal", path: "/about" },
      
-      { name: "Aims and Scope", path: "/aims-and-scope" },
-      { name: "Indexing & Abstracting", path: "/indexing-and-abstracting" },
-      { name: "Open Access Policy", path: "/open-access-policy" },
-      { name: "Subscription Policy", path: "/subscription-policy" },
-    ],
+    //   { name: "Aims and Scope", path: "/aims-and-scope" },
+    //   { name: "Indexing & Abstracting", path: "/indexing-and-abstracting" },
+    //   { name: "Open Access Policy", path: "/open-access-policy" },
+    //   { name: "Subscription Policy", path: "/subscription-policy" },
+    // ],
   },
 
   {
     name: "For Authors",
     path: "/author-guidelines",
-    dropdown: [
-      { name: "Author Guidelines", path: "/author-guidelines" },
-      { name: "Submit Manuscript", path: "/submit-manuscript" },
-      { name: "Publication Ethics", path: "/publication-ethics" },
-      { name: "Peer Review Process", path: "/peer-review-process" },
-      { name: "Copyright Policy", path: "/copyright-policy" },
-      {
-        name: "Article Processing Charges",
-        path: "/article-processing-charges",
-      },
-    ],
+    // dropdown: [
+    //   { name: "Author Guidelines", path: "/author-guidelines" },
+    //   { name: "Submit Manuscript", path: "/submit-manuscript" },
+    //   { name: "Publication Ethics", path: "/publication-ethics" },
+    //   { name: "Peer Review Process", path: "/peer-review-process" },
+    //   { name: "Copyright Policy", path: "/copyright-policy" },
+    //   {
+    //     name: "Article Processing Charges",
+    //     path: "/article-processing-charges",
+    //   },
+    // ],
   },
  { name: "Editorial Board", path: "/editorial-board" },
   { name: "Current Issue", path: "/current-issue" },

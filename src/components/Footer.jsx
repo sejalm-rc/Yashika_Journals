@@ -20,15 +20,11 @@ const journalLinks = [
   { name: "Indexing & Abstracting", path: "/indexing-and-abstracting" },
   { name: "Current Issue", path: "/current-issue" },
   { name: "Archives", path: "/archives" },
-  { name: "Contact", path: "/contact" },
+  
 ];
 
 const authorLinks = [
-  {
-    name: "Author Guidelines",
-    path: "/author-guidelines",
-    newTab: true,
-  },
+ 
   {
     name: "Submit Manuscript",
     path: "/submit-manuscript",
