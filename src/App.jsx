@@ -12,6 +12,8 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ProtectedRoute from "./components/ProtectedRoute";
 
+import AdminLayout from "./pages/admin/AdminLayout";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Journals from "./pages/Journals";
@@ -38,11 +40,13 @@ import PrivacyPolicy from "./pages/FooterPages/PrivacyPolicy";
 import TermsOfUse from "./pages/FooterPages/TermsOfUse";
 import ConflictOfInterest from "./pages/FooterPages/ConflictOfInterest";
 import PlagiarismPolicy from "./pages/FooterPages/PlagiarismPolicy";
+import PublishArticle from "./pages/admin/PublishArticle";
+import CreateIssue from "./pages/admin/CreateIssue";
+import ManuscriptDetails from "./pages/admin/ManuscriptDetails";
+import CrossrefXmlExport from "./pages/admin/CrossrefXmlExport";
 
 const hideLayoutRoutes = [
   "/login",
-  "/admin/dashboard",
-  "/author/dashboard",
   "/author-guidelines",
   "/open-access-policy",
   "/publication-ethics",
@@ -64,6 +68,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         {/* Public website pages */}
         <Route path="/" element={<Home />} />
+
         <Route path="/about" element={<About />} />
 
         <Route
@@ -83,24 +88,140 @@ const AnimatedRoutes = () => {
           element={<SubscriptionPolicy />}
         />
 
-        <Route path="/editorial-board" element={<EditorialBoard />} />
-        <Route path="/current-issue" element={<CurrentIssue />} />
-        <Route path="/archives" element={<Archives />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/editorial-board"
+          element={<EditorialBoard />}
+        />
+
+        <Route
+          path="/current-issue"
+          element={<CurrentIssue />}
+        />
+
+        <Route
+          path="/archives"
+          element={<Archives />}
+        />
+
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
 
         {/* Authentication */}
-        <Route path="/login" element={<Login />} />
+        <Route
+          path="/login"
+          element={<Login />}
+        />
 
-        {/* Admin protected routes */}
-        <Route element={<ProtectedRoute allowedRoles={["admin"]} />}>
+        {/* Admin protected layout */}
+        <Route
+          element={
+            <ProtectedRoute allowedRoles={["admin"]} />
+          }
+        >
           <Route
-            path="/admin/dashboard"
-            element={<AdminDashboard />}
-          />
+            path="/admin"
+            element={<AdminLayout />}
+          >
+            <Route
+              index
+              element={
+                <Navigate
+                  to="dashboard"
+                  replace
+                />
+              }
+            />
+
+            <Route
+              path="dashboard"
+              element={<AdminDashboard />}
+            />
+              <Route
+      path="/admin/articles"
+      element={<PublishArticle />}
+    />
+      <Route
+      path="create-issue"
+      element={<CreateIssue />}
+    />
+        <Route
+      path="submissions/:manuscriptId"
+      element={<ManuscriptDetails />}
+    />
+     <Route
+      path="crossref-export"
+      element={<CrossrefXmlExport />}
+    />
+
+            {/*
+            Add your future admin pages here:
+
+            <Route
+              path="journals"
+              element={<AdminJournals />}
+            />
+
+            <Route
+              path="journals/add"
+              element={<AddJournal />}
+            />
+
+            <Route
+              path="articles"
+              element={<AdminArticles />}
+            />
+
+            <Route
+              path="articles/add"
+              element={<AddArticle />}
+            />
+
+            <Route
+              path="bulk-upload"
+              element={<BulkArticleUpload />}
+            />
+
+            <Route
+              path="submissions"
+              element={<AdminSubmissions />}
+            />
+
+            <Route
+              path="submissions/:manuscriptId"
+              element={<ManuscriptDetails />}
+            />
+
+            <Route
+              path="authors"
+              element={<AdminAuthors />}
+            />
+
+            <Route
+              path="messages"
+              element={<AdminMessages />}
+            />
+
+            <Route
+              path="profile"
+              element={<AdminProfile />}
+            />
+
+            <Route
+              path="settings"
+              element={<AdminSettings />}
+            />
+            */}
+          </Route>
         </Route>
 
         {/* Author protected routes */}
-        <Route element={<ProtectedRoute allowedRoles={["author"]} />}>
+        <Route
+          element={
+            <ProtectedRoute allowedRoles={["author"]} />
+          }
+        >
           <Route
             path="/author/dashboard"
             element={<AuthorDashboard />}
@@ -158,8 +279,11 @@ const AnimatedRoutes = () => {
           element={<PlagiarismPolicy />}
         />
 
-        {/* Unknown route */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        {/* Optional fallback route */}
+        <Route
+          path="*"
+          element={<Navigate to="/" replace />}
+        />
       </Routes>
     </AnimatePresence>
   );
@@ -175,7 +299,9 @@ const AppLayout = () => {
 
   const hideLayout =
     hideLayoutRoutes.includes(normalizedPath) ||
+    normalizedPath === "/admin" ||
     normalizedPath.startsWith("/admin/") ||
+    normalizedPath === "/author" ||
     normalizedPath.startsWith("/author/");
 
   return (

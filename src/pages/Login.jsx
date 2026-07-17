@@ -15,7 +15,7 @@ import {
 const STATIC_USERS = {
   admin: {
     email: "admin@yashikapublication.com",
-    password: "Admin@123",
+    password: "12345",
     role: "admin",
     name: "Administrator",
     redirectPath: "/admin/dashboard",
@@ -153,9 +153,9 @@ function Login() {
   return (
     <main className="relative flex min-h-screen  w-full items-center justify-center overflow-hidden bg-gradient-to-br from-[#EEF5FF] via-white to-[#E6F0FF] px-4 py-6 sm:px-6 sm:py-8">
       {/* Background decoration */}
-      <div className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-blue-300/20 blur-3xl sm:h-80 sm:w-80" />
+      <div className="pointer-events-none absolute -left-24 -top-24 h-64 w-64 rounded-full bg-blue-300/20 blur-3xl sm:h-75 sm:w-75" />
 
-      <div className="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-indigo-300/20 blur-3xl sm:h-80 sm:w-80" />
+      <div className="pointer-events-none absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-indigo-300/20 blur-3xl sm:h-75 sm:w-75" />
 
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/60 blur-3xl" />
 
@@ -209,8 +209,8 @@ function Login() {
               Sign in to continue
             </h1>
 
-            <p className="mt-1 max-w-[250px] text-[11px] leading-4 text-slate-500 min-[360px]:text-xs sm:text-sm sm:leading-5">
-              Access your Yashika Publications dashboard
+            <p className="mt-1 max-w-[250px] text-[11px] leading-4 text-slate-500 min-[360px]:text-xs sm:text-[12px] sm:leading-2">
+              Access your Yashika Publications 
             </p>
           </div>
         </div>
@@ -254,7 +254,7 @@ function Login() {
 
         <form
           onSubmit={handleSubmit}
-          className="mt-6 space-y-4 sm:mt-7 sm:space-y-5"
+          className="mt-4 space-y-4 sm:mt-5 sm:space-y-4"
         >
           {/* Email */}
           <div>
@@ -281,7 +281,7 @@ function Login() {
                 autoComplete="email"
                 placeholder="Enter your email address"
                 disabled={isSubmitting}
-                className="h-12 w-full rounded-xl border border-slate-300 bg-white pl-12 pr-4 text-sm text-slate-800 outline-none transition-all duration-300 placeholder:text-slate-400 hover:border-blue-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-50"
+                className="h-11 w-full rounded-xl border border-slate-300 bg-white pl-12 pr-4 text-sm text-slate-800 outline-none transition-all duration-300 placeholder:text-slate-400 hover:border-blue-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-50"
               />
             </div>
           </div>
@@ -311,7 +311,7 @@ function Login() {
                 autoComplete="current-password"
                 placeholder="Enter your password"
                 disabled={isSubmitting}
-                className="h-12 w-full rounded-xl border border-slate-300 bg-white pl-12 pr-12 text-sm text-slate-800 outline-none transition-all duration-300 placeholder:text-slate-400 hover:border-blue-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-50"
+                className="h-11 w-full rounded-xl border border-slate-300 bg-white pl-12 pr-12 text-sm text-slate-800 outline-none transition-all duration-300 placeholder:text-slate-400 hover:border-blue-300 focus:border-blue-600 focus:ring-4 focus:ring-blue-100 disabled:cursor-not-allowed disabled:bg-slate-50"
               />
 
               <button
@@ -395,7 +395,7 @@ function Login() {
                     scale: 0.98,
                   }
             }
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#123FC3] to-[#0868EE] px-4 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/35 disabled:cursor-not-allowed disabled:opacity-70 sm:text-base"
+            className="flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#123FC3] to-[#0868EE] px-4 text-sm font-semibold text-white shadow-lg shadow-blue-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/35 disabled:cursor-not-allowed disabled:opacity-70 sm:text-base"
           >
             {isSubmitting ? (
               <>
@@ -419,7 +419,7 @@ function Login() {
           </motion.button>
         </form>
         {/* Back link */}
-        <div className="mt-4 flex justify-center">
+        <div className="mt-3 flex justify-center">
           <Link
             to="/"
             className="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-blue-600 transition-all duration-300 hover:bg-blue-50 hover:text-[#0B2C66]"
