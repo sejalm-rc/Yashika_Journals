@@ -23,7 +23,7 @@ const STATIC_USERS = {
 
   author: {
     email: "author@yashikapublication.com",
-    password: "Author@123",
+    password: "12345",
     role: "author",
     name: "Author",
     redirectPath: "/author/dashboard",
