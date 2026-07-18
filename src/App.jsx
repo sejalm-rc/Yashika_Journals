@@ -387,6 +387,7 @@ import PrivacyPolicy from "./pages/FooterPages/PrivacyPolicy";
 import TermsOfUse from "./pages/FooterPages/TermsOfUse";
 import ConflictOfInterest from "./pages/FooterPages/ConflictOfInterest";
 import PlagiarismPolicy from "./pages/FooterPages/PlagiarismPolicy";
+import AuthorSubmitManuscript from "./pages/author/AuthorSubmitManuscript";
 
 const hideLayoutRoutes = [
   "/login",
@@ -536,9 +537,12 @@ const AnimatedRoutes = () => {
               path="dashboard"
               element={<AuthorDashboard />}
             />
-
+ <Route
+              path="submissions"
+              element={<AuthorSubmitManuscript />}
+            />
             {/*
-            Add author pages here after creating them:
+           
 
             <Route
               path="submit-manuscript"
